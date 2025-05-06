@@ -1,0 +1,51 @@
+<questions topic="Ciencia">
+  <question>
+    <q>¿Cuál es el símbolo químico del oro?</q>
+    <a1>Au</a1>
+    <a2>Ag</a2>
+    <a3>Fe</a3>
+    <a4>Pb</a4>
+    <epicHint>Su símbolo proviene del latín “aurum”.</epicHint>
+    <legendaryHint>Empieza con la letra “A” y termina con “u”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué planeta es conocido como el “Planeta Rojo”?</q>
+    <a1>Marte</a1>
+    <a2>Júpiter</a2>
+    <a3>Venus</a3>
+    <a4>Saturno</a4>
+    <epicHint>Su nombre es también el del dios romano de la guerra.</epicHint>
+    <legendaryHint>Empieza con “Mar–”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cuál es la velocidad de la luz en el vacío (aproximada en km/s)?</q>
+    <a1>299792</a1>
+    <a2>150000</a2>
+    <a3>384400</a3>
+    <a4>123456</a4>
+    <epicHint>Comienza con “299”.</epicHint>
+    <legendaryHint>Termina en “792”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué gas utilizan las plantas en la fotosíntesis?</q>
+    <a1>CO₂</a1>
+    <a2>O₂</a2>
+    <a3>N₂</a3>
+    <a4>CH₄</a4>
+    <epicHint>Es el gas de efecto invernadero principal.</epicHint>
+    <legendaryHint>Su fórmula tiene un carbono y dos oxígenos.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cuál es el orgánulo conocido como “la central energética de la célula”?</q>
+    <a1>Mitocondria</a1>
+    <a2>Cloroplasto</a2>
+    <a3>Retículo endoplásmico</a3>
+    <a4>Ribosoma</a4>
+    <epicHint>Produce ATP mediante respiración celular.</epicHint>
+    <legendaryHint>Su nombre comienza con “Mito–”.</legendaryHint>
+  </question>
+</questions>

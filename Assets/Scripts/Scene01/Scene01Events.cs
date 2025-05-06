@@ -69,15 +69,12 @@ public class Scene01Events : MonoBehaviour
 
 
         // Al terminar toda la historia
-        //mainTextObject.SetActive(false);
-        //wawi.SetActive(false);
-        //wawo.SetActive(false);
         nextButton.SetActive(true);
         eventPos = 1;
         Debug.Log("[Scene01] Historia completa.");
     }
 
-    IEnumerator EventOne()
+    IEnumerator TransitionToQuiz()
     {
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(1);
@@ -89,7 +86,7 @@ public class Scene01Events : MonoBehaviour
     {
         if (eventPos == 1)
         {
-            StartCoroutine(EventOne());
+            StartCoroutine(TransitionToQuiz());
         }
     }
 

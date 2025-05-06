@@ -1,0 +1,51 @@
+<questions topic="Historia">
+  <question>
+    <q>¿En qué año llegó Cristóbal Colón a América?</q>
+    <a1>1492</a1>
+    <a2>1502</a2>
+    <a3>1488</a3>
+    <a4>1519</a4>
+    <epicHint>Fue a finales del siglo XV.</epicHint>
+    <legendaryHint>El número termina en “92”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quién fue el primer emperador del Imperio Romano?</q>
+    <a1>Augusto</a1>
+    <a2>César</a2>
+    <a3>Tiberio</a3>
+    <a4>Nerón</a4>
+    <epicHint>Su verdadero nombre era Octavio.</epicHint>
+    <legendaryHint>Recibe el título de “príncipe de la paz”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿En qué año cayó el Muro de Berlín?</q>
+    <a1>1989</a1>
+    <a2>1991</a2>
+    <a3>1987</a3>
+    <a4>1993</a4>
+    <epicHint>Fue justo antes de la reunificación alemana.</epicHint>
+    <legendaryHint>El año comparte dígitos con “89”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quién lideraba la Unión Soviética durante la Segunda Guerra Mundial?</q>
+    <a1>Josef Stalin</a1>
+    <a2>Vladímir Lenin</a2>
+    <a3>Nikita Jrushchov</a3>
+    <a4>Mijaíl Gorbachov</a4>
+    <epicHint>Su apellido rima con “capitán”.</epicHint>
+    <legendaryHint>Comienza con “Sta–”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué civilización precolombina construyó Machu Picchu?</q>
+    <a1>Inca</a1>
+    <a2>Azteca</a2>
+    <a3>Maya</a3>
+    <a4>Olmeca</a4>
+    <epicHint>Su imperio estaba centrado en Cusco.</epicHint>
+    <legendaryHint>Su nombre empieza y termina con vocal “I–a”.</legendaryHint>
+  </question>
+</questions>
