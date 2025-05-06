@@ -1,0 +1,15 @@
+<story>
+  <text speaker="wawi">Hola, soy Wawi. Bienvenido a nuestra historia.</text>
+  <text speaker="wawi">Hoy emprenderemos un viaje desconocido por tierras lejanas.</text>
+  <text speaker="wawo">¡Y yo soy Wawo! Prepárate para lo inesperado.</text>
+  <text speaker="wawi">Nuestro primer destino es el Bosque Susurrante.</text>
+  <text speaker="wawi">Dicen que sus árboles hablan al caer la noche.</text>
+  <text speaker="wawo">¿Escuchas esos murmullos? Parece que alguien nos observa…</text>
+  <text speaker="wawi">No tengas miedo, Wawo. Avancemos con cautela.</text>
+  <text speaker="wawi">Mira esa extraña luz roja al fondo del claro.</text>
+  <text speaker="wawo">Es un portal antiguo. Solo los valientes se atreven a cruzarlo.</text>
+  <text speaker="wawi">Tomémonos de la mano y démosle un paso juntos.</text>
+  <text speaker="wawo">¡Allá vamos!</text>
+  <text speaker="wawi">Al otro lado encontrarás preguntas que probarán tu ingenio.</text>
+  <text speaker="wawi">Cuando estés listo, aparecerá el primero de los quizzes.</text>
+</story>
