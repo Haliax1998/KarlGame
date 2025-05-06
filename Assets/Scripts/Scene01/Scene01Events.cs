@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Scene01Events : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] GameObject charName;
     [SerializeField] GameObject nextButton;
     [SerializeField] int eventPos = 0;
+    [SerializeField] GameObject fadeIn;
     [SerializeField] GameObject fadeOut;
 
     List<StoryLineData> storyLines;
@@ -35,6 +37,7 @@ public class Scene01Events : MonoBehaviour
     IEnumerator EventStarter()
     {
         yield return new WaitForSeconds(1);
+        fadeIn.SetActive(false);
         wawi.SetActive(true);
         yield return new WaitForSeconds(1);
         mainTextObject.SetActive(true);
@@ -76,8 +79,9 @@ public class Scene01Events : MonoBehaviour
 
     IEnumerator EventOne()
     {
-        fadeOut.SetActive(true );
+        fadeOut.SetActive(true);
         yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(1);
         Debug.Log("[Scene01] Boton presionado");
     }
 

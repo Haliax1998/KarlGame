@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class QuizEvents : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] GameObject fadeIn;
     void Start()
     {
-        
+        StartCoroutine(EventStarter());
     }
 
     // Update is called once per frame
@@ -15,4 +16,14 @@ public class QuizEvents : MonoBehaviour
     {
         
     }
+
+
+    IEnumerator EventStarter()
+    {
+        yield return new WaitForSeconds(2);
+        fadeIn.SetActive(true);
+        yield return new WaitForSeconds(2);
+        fadeIn.SetActive(false);
+    }
+
 }
