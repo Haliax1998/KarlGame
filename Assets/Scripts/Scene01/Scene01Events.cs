@@ -14,6 +14,9 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] int textLength;
     [SerializeField] GameObject mainTextObject;
     [SerializeField] GameObject charName;
+    [SerializeField] GameObject nextButton;
+    [SerializeField] int eventPos = 0;
+    [SerializeField] GameObject fadeOut;
 
     List<StoryLineData> storyLines;
 
@@ -63,9 +66,28 @@ public class Scene01Events : MonoBehaviour
 
 
         // Al terminar toda la historia
-        mainTextObject.SetActive(false);
-        wawi.SetActive(false);
-        wawo.SetActive(false);
+        //mainTextObject.SetActive(false);
+        //wawi.SetActive(false);
+        //wawo.SetActive(false);
+        nextButton.SetActive(true);
+        eventPos = 1;
         Debug.Log("[Scene01] Historia completa.");
     }
+
+    IEnumerator EventOne()
+    {
+        fadeOut.SetActive(true );
+        yield return new WaitForSeconds(1);
+        Debug.Log("[Scene01] Boton presionado");
+    }
+
+    public void NextButton()
+    {
+        if (eventPos == 1)
+        {
+            StartCoroutine(EventOne());
+        }
+    }
+
+
 }
