@@ -26,6 +26,10 @@ public class QuizEvents : MonoBehaviour
     [Tooltip("TextMeshPro para mostrar la pista")]
     [SerializeField] private TextMeshProUGUI hintText;
 
+    [Tooltip("TextMeshProUGUI donde se mostrará el puntaje al final")]
+    [SerializeField] private TextMeshProUGUI scoreText;
+    private int _score = 0;
+
 
 
     // Aquí guardaremos todas las preguntas
@@ -95,15 +99,25 @@ public class QuizEvents : MonoBehaviour
         var q = _questions[_currentIndex];
         bool correct = chosenIndex == q.correctAnswerIndex;
 
-        hintText.text = correct ? q.legendaryHint : q.epicHint;
+        // 1) Incrementa puntaje si acierta
+        if (correct)
+            _score++;
 
-        // Desactiva todos los botones para evitar múltiples clicks
+        // 2) Muestra “Correcto” o “Incorrecto” + la pista
+        string tag = correct ? "<color=green>Correcto!</color>"
+                             : "<color=red>Incorrecto.</color>";
+        hintText.text = $"{tag}  {(correct ? q.legendaryHint : q.epicHint)}";
+
+        Debug.Log(correct ? "¡Correcto!" : "Fallaste…");
+
+        // 3) Desactiva todos los botones
         foreach (var go in optionButtonObjects)
             go.GetComponent<Button>().interactable = false;
 
-        // Avanza a la siguiente pregunta tras 1 segundo
+        // 4) Avanza tras 1 segundo
         StartCoroutine(NextQuestionAfterDelay(1f));
     }
+
 
     private IEnumerator NextQuestionAfterDelay(float delay)
     {
@@ -120,8 +134,18 @@ public class QuizEvents : MonoBehaviour
     {
         questionText.text = "¡Quiz terminado!";
         hintText.text = "";
+
+        // Muestra el score en screen
+        if (scoreText != null)
+        {
+            scoreText.gameObject.SetActive(true);
+            scoreText.text = $"Puntaje: {_score}/{_questions.Count}";
+        }
+
+        // Oculta botones
         foreach (var go in optionButtonObjects)
             go.SetActive(false);
     }
+
 
 }
