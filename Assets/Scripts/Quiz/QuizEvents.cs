@@ -29,7 +29,8 @@ public class QuizEvents : MonoBehaviour
     [Tooltip("TextMeshProUGUI donde se mostrará el puntaje al final")]
     [SerializeField] private TextMeshProUGUI scoreText;
     private int _score = 0;
-
+    // Variable que guardará la posición real de la respuesta correcta
+    private int _displayedCorrectIndex;
 
 
     // Aquí guardaremos todas las preguntas
@@ -72,6 +73,18 @@ public class QuizEvents : MonoBehaviour
         questionText.text = $"[{q.topic}] {q.question}";
         hintText.text = "";
 
+        var indices = Enumerable.Range(0, q.options.Length)
+                                .OrderBy(_ => Random.value)
+                                .ToArray();
+
+        var shuffledOptions = indices
+            .Select(i => q.options[i])
+            .ToArray();
+
+        _displayedCorrectIndex = System.Array.IndexOf(indices, 0);
+
+
+
         // Para cada GameObject referenciado…
         for (int i = 0; i < optionButtonObjects.Length; i++)
         {
@@ -79,7 +92,7 @@ public class QuizEvents : MonoBehaviour
 
             // 1) Asigna el texto de la opción
             var label = btnGO.GetComponentInChildren<TextMeshProUGUI>();
-            label.text = q.options[i];
+            label.text = shuffledOptions[i];
 
             // 2) Obtén el componente Button
             var btn = btnGO.GetComponent<Button>();
@@ -97,7 +110,8 @@ public class QuizEvents : MonoBehaviour
     private void OnOptionSelected(int chosenIndex)
     {
         var q = _questions[_currentIndex];
-        bool correct = chosenIndex == q.correctAnswerIndex;
+        bool correct = chosenIndex == _displayedCorrectIndex;
+
 
         // 1) Incrementa puntaje si acierta
         if (correct)
