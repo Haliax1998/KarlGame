@@ -1,5 +1,29 @@
 <story>
-  <text speaker="wawi">Hola, soy Wawi. Bienvenido a nuestra historia.</text>
-  <text speaker="wawi">Hoy emprenderemos un viaje desconocido por tierras lejanas.</text>
-  <text speaker="wawo">¡Y yo soy Wawo! Prepárate para lo inesperado.</text>
+  <!-- Escena 1: La biblioteca escolar -->
+  <image name="biblioteca" />
+  <text speaker="Narrador">Al abrir la segunda sección del misterioso libro, las páginas comienzan a brillar con una luz dorada. De repente, me encuentro transportado al año 1878, en medio del desierto de Atacama...</text>
+
+  <image name="transicion_viaje_tiempo" />
+
+  <!-- Escena 2: El desierto de Atacama, 1878 -->
+  <image name="desierto_atacama" />
+  <text speaker="Narrador">Ante mis ojos se extiende un vasto desierto, pero no está vacío. Cientos de hombres trabajan bajo el sol ardiente, extrayendo un mineral blanco y brillante.</text>
+  <text speaker="Trabajador">Este salitre vale oro, muchacho. Se usa para hacer fertilizantes y pólvora. Bolivia, Chile y Perú pelean por controlarlo.</text>
+
+  <image name="mapa_disputa" />
+
+  <!-- Escena 3: Antofagasta, febrero de 1879 -->
+  <image name="puerto_antofagasta" />
+  <text speaker="Narrador">El 14 de febrero de 1879, soldados chilenos ocupan el puerto boliviano de Antofagasta. La tensión se puede sentir en el aire.</text>
+  <text speaker="Oficial chileno">Bolivia violó el tratado de 1874 al subir los impuestos a nuestras empresas. ¡No lo permitiremos!</text>
+  <text speaker="Ciudadano boliviano">¡Esto es una invasión! ¡Perú debe ayudarnos según nuestro tratado secreto!</text>
+
+  <image name="tratado_secreto_1873" />
+
+  <!-- Escena 4: Lima, Palacio de Gobierno -->
+  <image name="palacio_gobierno" />
+  <text speaker="Presidente Prado">Señores, estamos ante una difícil decisión. Debemos honrar nuestro compromiso con Bolivia, pero nuestro país no está preparado para la guerra.</text>
+  <text speaker="Ministro">Señor Presidente, Chile ha declarado la guerra el 5 de abril de 1879. Ya no hay vuelta atrás.</text>
+
+  <image name="decreto_guerra_1879" />
 </story>

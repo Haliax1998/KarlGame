@@ -3,36 +3,59 @@ using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
 
-public class StoryLineData
+public abstract class StoryBlock { }
+
+public class StoryText : StoryBlock
 {
     public string Content;
     public string Speaker;
-    public StoryLineData(string content, string speaker)
+
+    public StoryText(string content, string speaker)
     {
         Content = content;
         Speaker = speaker;
     }
 }
 
+public class StoryImage : StoryBlock
+{
+    public string ImageName;
+
+    public StoryImage(string imageName)
+    {
+        ImageName = imageName;
+    }
+}
+
 public static class ScriptLoaderTxtAsXml
 {
-    public static List<StoryLineData> LoadStoryLines()
+    public static List<StoryBlock> LoadStoryBlocks()
     {
-        // Ajusta aquí "story" si tu .txt se llama story.txt
         var asset = Resources.Load<TextAsset>("Story/story");
         if (asset == null)
         {
             Debug.LogError("No se encontró Resources/Story/story.txt");
-            return new List<StoryLineData>();
+            return new List<StoryBlock>();
         }
 
         var doc = XDocument.Parse(asset.text);
-        return doc.Root
-                  .Elements("text")
-                  .Select(x => new StoryLineData(
-                      x.Value.Trim(),
-                      (string)x.Attribute("speaker") ?? ""
-                  ))
-                  .ToList();
+        var blocks = new List<StoryBlock>();
+
+        foreach (var node in doc.Root.Elements())
+        {
+            if (node.Name == "text")
+            {
+                string content = node.Value.Trim();
+                string speaker = (string)node.Attribute("speaker") ?? "";
+                blocks.Add(new StoryText(content, speaker));
+            }
+            else if (node.Name == "image")
+            {
+                string imageName = (string)node.Attribute("name") ?? "";
+                blocks.Add(new StoryImage(imageName));
+            }
+        }
+
+        return blocks;
     }
 }

@@ -20,7 +20,7 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] GameObject fadeIn;
     [SerializeField] GameObject fadeOut;
 
-    List<StoryLineData> storyLines;
+    List<StoryBlock> storyBlocks;
 
     void Update()
     {
@@ -30,7 +30,7 @@ public class Scene01Events : MonoBehaviour
     void Start()
     {
         // Carga todas las líneas de la historia
-        storyLines = ScriptLoaderTxtAsXml.LoadStoryLines();
+        storyBlocks = ScriptLoaderTxtAsXml.LoadStoryBlocks();
         StartCoroutine(EventStarter());
     }
 
@@ -43,28 +43,43 @@ public class Scene01Events : MonoBehaviour
         mainTextObject.SetActive(true);
 
         // Recorremos cada línea de storyLines
-        foreach (var line in storyLines)
+        foreach (var block in storyBlocks)
         {
-            // Asigna quién habla
-            wawi.SetActive(line.Speaker == "wawi");
-            wawo.SetActive(line.Speaker == "wawo");
+            if (block is StoryImage img)
+            {
+                ImageLoader.ShowImage(img.ImageName);
+                yield return new WaitForSeconds(0.3f);
+            }
+            else if (block is StoryText line)
+            {
+                // Mostrar personajes solo si no es narrador
+                if (line.Speaker.ToLower() == "wawi" || line.Speaker.ToLower() == "wawo")
+                {
+                    wawi.SetActive(line.Speaker.ToLower() == "wawi");
+                    wawo.SetActive(line.Speaker.ToLower() == "wawo");
+                    charName.GetComponent<TMPro.TMP_Text>().text = line.Speaker;
+                }
+                else
+                {
+                    wawi.SetActive(false);
+                    wawo.SetActive(false);
+                    charName.GetComponent<TMPro.TMP_Text>().text = "";
+                }
 
-            charName.GetComponent<TMPro.TMP_Text>().text = line.Speaker;
-
-            // Prepara el texto
-            textToSpeak = line.Content;
-            textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
-            currentTextLength = textToSpeak.Length;
-            TextCreator.runTextPrint = true;
+                textToSpeak = line.Content;
+                textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
+                currentTextLength = textToSpeak.Length;
+                TextCreator.runTextPrint = true;
 
             // Espera un frame para que el TMP_Text vuelque el texto completo
-            yield return null;
-            yield return new WaitForSeconds(0.05f);
-            yield return new WaitForSeconds(1);
+                yield return null;
+                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(1);
             // Espera al typewriter
-            yield return new WaitUntil(() => textLength == currentTextLength);
+                yield return new WaitUntil(() => textLength == currentTextLength);
             // Pausa antes de la siguiente línea
-            yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(1);
+            }
         }
 
 
@@ -78,7 +93,7 @@ public class Scene01Events : MonoBehaviour
     {
         fadeOut.SetActive(true);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(3);
         Debug.Log("[Scene01] Boton presionado");
     }
 
