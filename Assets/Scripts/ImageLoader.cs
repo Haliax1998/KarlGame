@@ -7,7 +7,7 @@ public static class ImageLoader
     {
         if (string.IsNullOrEmpty(imageName)) return;
 
-        var sprite = Resources.Load<Sprite>($"Images/{imageName}");
+        var sprite = Resources.Load<Sprite>($"Images/Background/{imageName}");
         var img = GameObject.Find("SceneImage").GetComponent<Image>();
 
         if (sprite != null)
@@ -17,7 +17,7 @@ public static class ImageLoader
         }
         else
         {
-            Debug.LogWarning($"No se encontró la imagen '{imageName}' en Resources/Images/");
+            Debug.LogWarning($"No se encontró la imagen '{imageName}' en Resources/Images/Background/");
         }
     }
 }

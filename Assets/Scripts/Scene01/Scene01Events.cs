@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class Scene01Events : MonoBehaviour
 {
 
-    public GameObject wawo;
-    public GameObject wawi;
+    [SerializeField] public UnityEngine.UI.Image portraitImage;
     public GameObject textBox;
 
     [SerializeField] string textToSpeak;
@@ -38,7 +37,6 @@ public class Scene01Events : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         fadeIn.SetActive(false);
-        wawi.SetActive(true);
         yield return new WaitForSeconds(1);
         mainTextObject.SetActive(true);
 
@@ -53,17 +51,25 @@ public class Scene01Events : MonoBehaviour
             else if (block is StoryText line)
             {
                 // Mostrar personajes solo si no es narrador
-                if (line.Speaker.ToLower() == "wawi" || line.Speaker.ToLower() == "wawo")
+                if (line.Speaker.ToLower() == "narrador")
                 {
-                    wawi.SetActive(line.Speaker.ToLower() == "wawi");
-                    wawo.SetActive(line.Speaker.ToLower() == "wawo");
-                    charName.GetComponent<TMPro.TMP_Text>().text = line.Speaker;
+                    portraitImage.color = new Color(1, 1, 1, 0); // ocultar
+                    charName.GetComponent<TMPro.TMP_Text>().text = "Narrador";
                 }
                 else
                 {
-                    wawi.SetActive(false);
-                    wawo.SetActive(false);
-                    charName.GetComponent<TMPro.TMP_Text>().text = "";
+                    var sprite = Resources.Load<Sprite>($"Images/Characters/{line.Speaker.ToLower()}");
+                    if (sprite != null)
+                    {
+                        portraitImage.sprite = sprite;
+                        portraitImage.color = Color.white;
+                    }
+                    else
+                    {
+                        portraitImage.color = new Color(1, 1, 1, 0); // ocultar si no se encuentra
+                    }
+
+                    charName.GetComponent<TMPro.TMP_Text>().text = line.Speaker;
                 }
 
                 textToSpeak = line.Content;
@@ -99,8 +105,10 @@ public class Scene01Events : MonoBehaviour
 
     public void NextButton()
     {
+        Debug.Log($"Botón presionado. eventPos: {eventPos}");
         if (eventPos == 1)
         {
+            Debug.Log("Iniciando transición a la escena...");
             StartCoroutine(TransitionToQuiz());
         }
     }
