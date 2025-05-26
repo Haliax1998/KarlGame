@@ -83,8 +83,8 @@ public class Scene01Events : MonoBehaviour
                 yield return new WaitForSeconds(1);
             // Espera al typewriter
                 yield return new WaitUntil(() => textLength == currentTextLength);
-            // Pausa antes de la siguiente línea
-                yield return new WaitForSeconds(1);
+                // Pausa antes de la siguiente línea
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             }
         }
 
