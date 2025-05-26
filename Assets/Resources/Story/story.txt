@@ -75,7 +75,7 @@
 
  <!-- Escena 12: Defensa de Arica, 7 de junio de 1880 -->
  <image name="morro_arica_soldados_defendiendo" />
- <text speaker="Coronel Bolognesi">¡Defendamos Arica hasta el último hombre!</text>
+ <text speaker="Coronel Francisco Bolognesi">¡Defendamos Arica hasta el último hombre!</text>
 
  <image name="asalto_final_morro_arica" />
  <text speaker="Narrador">Tras heroica resistencia, Arica cae. El coronel Bolognesi muere defendiendo la plaza. Alfonso Ugarte se lanza al precipicio antes que entregar la bandera.</text>
@@ -94,7 +94,7 @@
  <text speaker="Narrador">El 17 de enero de 1881, las tropas chilenas ocupan Lima. El presidente Piérola huye a la sierra. Parece que la guerra ha terminado, pero...</text>
 
  <image name="caceres_montanas_campesinos" />
- <text speaker="Cáceres">La guerra no ha terminado. Desde la sierra continuaremos la resistencia.</text>
+ <text speaker="Coronel Cáceres">La guerra no ha terminado. Desde la sierra continuaremos la resistencia.</text>
 
  <!-- Escena 15: La resistencia en la sierra -->
  <image name="caceres_guerrilleros_campesinos_sierra" />
@@ -104,8 +104,8 @@
  <image name="batalla_guerrillas_territorio_serrano" />
 
  <!-- Escena 16: Batalla de La Breña, julio de 1882 -->
- <image name="combate_terreno_montanoso" />
- <text speaker="Cáceres">¡Conocemos estas montañas mejor que nadie! ¡Atacamos!</text>
+ <image name="batalla_guerrillas_territorio_serrano" />
+ <text speaker="Coronel Cáceres">¡Conocemos estas montañas mejor que nadie! ¡Atacamos!</text>
  <text speaker="Narrador">En las batallas de Pucará, Marcavalle y Concepción, las tropas de Cáceres demuestran que la resistencia continúa.</text>
 
  <!-- Escena 17: El final de la guerra -->
