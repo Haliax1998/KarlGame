@@ -1,51 +1,111 @@
 <questions topic="Historia">
   <question>
-    <q>¿En qué año llegó Cristóbal Colón a América?</q>
-    <a1>1492</a1>
-    <a2>1502</a2>
-    <a3>1488</a3>
-    <a4>1519</a4>
-    <epicHint>Fue a finales del siglo XV.</epicHint>
-    <legendaryHint>El número termina en “92”.</legendaryHint>
+    <q>¿Cuál fue la principal causa de la Guerra del Pacífico?</q>
+    <a1>El conflicto por el control del salitre en el desierto de Atacama</a1>
+    <a2>La disputa por el control del río Amazonas</a2>
+    <a3>La invasión chilena a Lima</a3>
+    <a4>El tratado secreto entre Perú y Bolivia</a4>
+    <epicHint>Recuerda que el salitre era llamado "el oro blanco" y era muy valioso para fertilizantes y explosivos.</epicHint>
+    <legendaryHint>Era un recurso extraído del desierto de Atacama.</legendaryHint>
   </question>
 
   <question>
-    <q>¿Quién fue el primer emperador del Imperio Romano?</q>
-    <a1>Augusto</a1>
-    <a2>César</a2>
-    <a3>Tiberio</a3>
-    <a4>Nerón</a4>
-    <epicHint>Su verdadero nombre era Octavio.</epicHint>
-    <legendaryHint>Recibe el título de “príncipe de la paz”.</legendaryHint>
+    <q>¿En qué fecha Chile declaró la guerra al Perú y Bolivia?</q>
+    <a1>5 de abril de 1879</a1>
+    <a2>14 de febrero de 1879</a2>
+    <a3>21 de mayo de 1879</a3>
+    <a4>8 de octubre de 1879</a4>
+    <epicHint>Esta fecha marcó el inicio oficial del conflicto, después de la ocupación de Antofagasta.</epicHint>
+    <legendaryHint>Fue en abril de 1879.</legendaryHint>
   </question>
 
   <question>
-    <q>¿En qué año cayó el Muro de Berlín?</q>
-    <a1>1989</a1>
-    <a2>1991</a2>
-    <a3>1987</a3>
-    <a4>1993</a4>
-    <epicHint>Fue justo antes de la reunificación alemana.</epicHint>
-    <legendaryHint>El año comparte dígitos con “89”.</legendaryHint>
+    <q>¿Quién fue conocido como "el Caballero de los Mares"?</q>
+    <a1>Miguel Grau Seminario</a1>
+    <a2>Andrés Avelino Cáceres</a2>
+    <a3>Francisco Bolognesi</a3>
+    <a4>Alfonso Ugarte</a4>
+    <epicHint>Este marino peruano era conocido por su nobleza, incluso devolvió los objetos personales del comandante enemigo a su viuda.</epicHint>
+    <legendaryHint>Su apellido es Grau.</legendaryHint>
   </question>
 
   <question>
-    <q>¿Quién lideraba la Unión Soviética durante la Segunda Guerra Mundial?</q>
-    <a1>Josef Stalin</a1>
-    <a2>Vladímir Lenin</a2>
-    <a3>Nikita Jrushchov</a3>
-    <a4>Mijaíl Gorbachov</a4>
-    <epicHint>Su apellido rima con “capitán”.</epicHint>
-    <legendaryHint>Comienza con “Sta–”.</legendaryHint>
+    <q>¿En qué combate murió Miguel Grau?</q>
+    <a1>Combate de Angamos</a1>
+    <a2>Combate de Iquique</a2>
+    <a3>Batalla de Tarapacá</a3>
+    <a4>Batalla de Arica</a4>
+    <epicHint>Fue el 8 de octubre de 1879, cuando el Huáscar fue rodeado por varios barcos chilenos.</epicHint>
+    <legendaryHint>Comienza con “A”.</legendaryHint>
   </question>
 
   <question>
-    <q>¿Qué civilización precolombina construyó Machu Picchu?</q>
-    <a1>Inca</a1>
-    <a2>Azteca</a2>
-    <a3>Maya</a3>
-    <a4>Olmeca</a4>
-    <epicHint>Su imperio estaba centrado en Cusco.</epicHint>
-    <legendaryHint>Su nombre empieza y termina con vocal “I–a”.</legendaryHint>
+    <q>¿Quién pronunció la frase "Tengo gloriosos deberes que cumplir y los cumpliré hasta quemar el último cartucho"?</q>
+    <a1>Francisco Bolognesi</a1>
+    <a2>Miguel Grau</a2>
+    <a3>Andrés Avelino Cáceres</a3>
+    <a4>Alfonso Ugarte</a4>
+    <epicHint>Esta frase se pronunció durante la defensa de una importante plaza fuerte en el sur del Perú.</epicHint>
+    <legendaryHint>El apellido comienza con “Bolo–”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿En qué batalla se libró el "Campo de la Alianza"?</q>
+    <a1>Batalla de Tacna</a1>
+    <a2>Batalla de San Francisco</a2>
+    <a3>Batalla de Tarapacá</a3>
+    <a4>Batalla de Arica</a4>
+    <epicHint>Fue el 26 de mayo de 1880, donde lucharon tropas peruano-bolivianas contra Chile.</epicHint>
+    <legendaryHint>Ocurrió en Tacna.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quién se lanzó del Morro de Arica para no entregar la bandera peruana?</q>
+    <a1>Alfonso Ugarte</a1>
+    <a2>Francisco Bolognesi</a2>
+    <a3>Andrés Avelino Cáceres</a3>
+    <a4>Miguel Grau</a4>
+    <epicHint>Este héroe prefirió saltar al precipicio antes que permitir que la bandera cayera en manos enemigas.</epicHint>
+    <legendaryHint>Su apellido comienza con “Uga–”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quién fue conocido como "el Brujo de los Andes"?</q>
+    <a1>Andrés Avelino Cáceres</a1>
+    <a2>Francisco Bolognesi</a2>
+    <a3>Alfonso Ugarte</a3>
+    <a4>Miguel Grau</a4>
+    <epicHint>Este militar organizó la resistencia en la sierra con apoyo de los campesinos indígenas.</epicHint>
+    <legendaryHint>Su apellido comienza con “Cáceres”.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cuándo se ocupó Lima durante la guerra?</q>
+    <a1>17 de enero de 1881</a1>
+    <a2>8 de octubre de 1879</a2>
+    <a3>26 de mayo de 1880</a3>
+    <a4>20 de octubre de 1883</a4>
+    <epicHint>Esto ocurrió después de las batallas de San Juan y Miraflores en la capital.</epicHint>
+    <legendaryHint>Fue en enero de 1881.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cómo se llamó el tratado que puso fin a la Guerra del Pacífico?</q>
+    <a1>Tratado de Ancón</a1>
+    <a2>Tratado de Lima</a2>
+    <a3>Tratado de Tacna</a3>
+    <a4>Tratado del Pacífico</a4>
+    <epicHint>Se firmó el 20 de octubre de 1883 y estableció las condiciones del fin del conflicto.</epicHint>
+    <legendaryHint>El nombre empieza con "A".</legendaryHint>
+  </question>
+
+  <question>
+    <q>Según el Tratado de Ancón, ¿qué territorio cedió definitivamente el Perú a Chile?</q>
+    <a1>Tarapacá</a1>
+    <a2>Tacna y Arica</a2>
+    <a3>Lima</a3>
+    <a4>Iquique</a4>
+    <epicHint>Tacna y Arica quedaron bajo administración chilena por 10 años, pero este territorio se perdió para siempre.</epicHint>
+    <legendaryHint>Empieza con “Tara–”.</legendaryHint>
   </question>
 </questions>

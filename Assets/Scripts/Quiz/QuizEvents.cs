@@ -120,7 +120,9 @@ public class QuizEvents : MonoBehaviour
         // 2) Muestra “Correcto” o “Incorrecto” + la pista
         string tag = correct ? "<color=green>Correcto!</color>"
                              : "<color=red>Incorrecto.</color>";
-        hintText.text = $"{tag}  {(correct ? q.legendaryHint : q.epicHint)}";
+        // hintText.text = $"{tag}  {(correct ? q.legendaryHint : q.epicHint)}";
+
+        hintText.text = $"{tag}";
 
         Debug.Log(correct ? "¡Correcto!" : "Fallaste…");
 
@@ -146,14 +148,14 @@ public class QuizEvents : MonoBehaviour
 
     private void EndQuiz()
     {
-        questionText.text = "¡Quiz terminado!";
+        questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_score}/{_questions.Count}";
         hintText.text = "";
 
         // Muestra el score en screen
         if (scoreText != null)
         {
             scoreText.gameObject.SetActive(true);
-            scoreText.text = $"Puntaje: {_score}/{_questions.Count}";
+            scoreText.text = $"{_score}/{_questions.Count}";
         }
 
         // Oculta botones
