@@ -8,6 +8,9 @@ public class Scene01Events : MonoBehaviour
 
     [SerializeField] public UnityEngine.UI.Image portraitImage;
     public GameObject textBox;
+    AudioSource backgroundAudio;
+    AudioSource voiceAudio;
+
 
     [SerializeField] string textToSpeak;
     [SerializeField] int currentTextLength;
@@ -30,6 +33,8 @@ public class Scene01Events : MonoBehaviour
     {
         // Carga todas las líneas de la historia
         storyBlocks = ScriptLoaderTxtAsXml.LoadStoryBlocks();
+        backgroundAudio = GameObject.Find("BackgroundAudio").GetComponent<AudioSource>();
+        voiceAudio = GameObject.Find("VoiceAudio").GetComponent<AudioSource>();
         StartCoroutine(EventStarter());
     }
 
@@ -46,10 +51,22 @@ public class Scene01Events : MonoBehaviour
             if (block is StoryImage img)
             {
                 ImageLoader.ShowImage(img.ImageName);
+                backgroundAudio.Stop();
+                if (!string.IsNullOrEmpty(img.AudioName))
+                {
+                    backgroundAudio.loop = true;
+                    var bgClip = Resources.Load<AudioClip>($"Audio/{img.AudioName}");
+                    if (bgClip != null)
+                    {
+                        backgroundAudio.clip = bgClip;
+                        backgroundAudio.Play();
+                    }
+                }
                 yield return new WaitForSeconds(0.3f);
             }
             else if (block is StoryText line)
             {
+                voiceAudio.Stop();
                 // Mostrar personajes solo si no es narrador
                 if (line.Speaker.ToLower() == "narrador")
                 {
@@ -73,6 +90,17 @@ public class Scene01Events : MonoBehaviour
                 }
 
                 textToSpeak = line.Content;
+                if (!string.IsNullOrEmpty(line.AudioName))
+                {
+                    voiceAudio.Stop();
+                    voiceAudio.loop = false;
+                    var voiceClip = Resources.Load<AudioClip>($"Audio/{line.AudioName}");
+                    if (voiceClip != null)
+                    {
+                        voiceAudio.clip = voiceClip;
+                        voiceAudio.Play();
+                    }
+                }
                 textBox.GetComponent<TMPro.TMP_Text>().text = textToSpeak;
                 currentTextLength = textToSpeak.Length;
                 TextCreator.runTextPrint = true;

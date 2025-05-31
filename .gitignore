@@ -5,6 +5,7 @@
 [Bb]uilds/
 [Ll]ogs/
 [Mm]emoryCaptures/
+*.dwlt
 
 # Archivos de cache de Unity
 *.pidb
