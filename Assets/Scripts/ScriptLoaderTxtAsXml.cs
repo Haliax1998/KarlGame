@@ -9,21 +9,25 @@ public class StoryText : StoryBlock
 {
     public string Content;
     public string Speaker;
+    public string AudioName;
 
-    public StoryText(string content, string speaker)
+    public StoryText(string content, string speaker, string audioName = null)
     {
         Content = content;
         Speaker = speaker;
+        AudioName = audioName;
     }
 }
 
 public class StoryImage : StoryBlock
 {
     public string ImageName;
+    public string AudioName;
 
-    public StoryImage(string imageName)
+    public StoryImage(string imageName, string audioName = null)
     {
         ImageName = imageName;
+        AudioName = audioName;
     }
 }
 
@@ -47,12 +51,14 @@ public static class ScriptLoaderTxtAsXml
             {
                 string content = node.Value.Trim();
                 string speaker = (string)node.Attribute("speaker") ?? "";
-                blocks.Add(new StoryText(content, speaker));
+                string audio = (string)node.Attribute("audio");
+                blocks.Add(new StoryText(content, speaker, audio));
             }
             else if (node.Name == "image")
             {
-                string imageName = (string)node.Attribute("name") ?? "";
-                blocks.Add(new StoryImage(imageName));
+                string name = (string)node.Attribute("name") ?? "";
+                string audio = (string)node.Attribute("audio");
+                blocks.Add(new StoryImage(name, audio));
             }
         }
 

@@ -6,9 +6,9 @@
  <image name="transicion_viaje_tiempo" />
 
  <!-- Escena 2: El desierto de Atacama, 1878 -->
- <image name="desierto_atacama_trabajadores" />
+ <image name="desierto_atacama_trabajadores" audio="fondo"/>
  <text speaker="Narrador">Ante mis ojos se extiende un vasto desierto, pero no está vacío. Cientos de hombres trabajan bajo el sol ardiente, extrayendo un mineral blanco y brillante.</text>
- <text speaker="Trabajador">Este salitre vale oro, muchacho. Se usa para hacer fertilizantes y pólvora. Bolivia, Chile y Perú pelean por controlarlo.</text>
+ <text speaker="Trabajador" audio="chica">Este salitre vale oro, muchacho. Se usa para hacer fertilizantes y pólvora. Bolivia, Chile y Perú pelean por controlarlo.</text>
 
  <image name="mapa_region_disputa" />
 
