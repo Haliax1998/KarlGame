@@ -10,6 +10,8 @@ public class Scene01Events : MonoBehaviour
     public GameObject textBox;
     AudioSource backgroundAudio;
     AudioSource voiceAudio;
+    private bool isLogOpen = false;
+
 
 
     [SerializeField] string textToSpeak;
@@ -36,6 +38,22 @@ public class Scene01Events : MonoBehaviour
         backgroundAudio = GameObject.Find("BackgroundAudio").GetComponent<AudioSource>();
         voiceAudio = GameObject.Find("VoiceAudio").GetComponent<AudioSource>();
         StartCoroutine(EventStarter());
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
+
     }
 
     IEnumerator EventStarter()
@@ -90,6 +108,8 @@ public class Scene01Events : MonoBehaviour
                 }
 
                 textToSpeak = line.Content;
+                HistoryLog.AddEntry(line.Speaker, line.Content, line.AudioName);
+
                 if (!string.IsNullOrEmpty(line.AudioName))
                 {
                     voiceAudio.Stop();
@@ -112,7 +132,7 @@ public class Scene01Events : MonoBehaviour
             // Espera al typewriter
                 yield return new WaitUntil(() => textLength == currentTextLength);
                 // Pausa antes de la siguiente línea
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && !isLogOpen);
             }
         }
 
@@ -141,5 +161,9 @@ public class Scene01Events : MonoBehaviour
         }
     }
 
+    public void SetLogOpen(bool state)
+    {
+        isLogOpen = state;
+    }
 
 }
