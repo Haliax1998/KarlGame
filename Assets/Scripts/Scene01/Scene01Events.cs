@@ -54,6 +54,7 @@ public class Scene01Events : MonoBehaviour
         fadeIn.SetActive(false);
         yield return new WaitForSeconds(1);
         mainTextObject.SetActive(true);
+        portraitImage.color = new Color(1, 1, 1, 0);
 
         // Recorremos cada línea de storyLines
         foreach (var block in storyBlocks)

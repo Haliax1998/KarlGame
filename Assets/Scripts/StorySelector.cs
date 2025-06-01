@@ -6,7 +6,7 @@ public class StorySelector : MonoBehaviour
 {
     [SerializeField] private GameObject fadeOut;
     [SerializeField] private float delay = 3f;
-    [SerializeField] private string targetScene = "AdventureScene"; // O puedes usar SceneManager.LoadScene(1)
+    [SerializeField] private string targetScene = "AdventureScene";
 
     public void SelectStory(string storyName)
     {
