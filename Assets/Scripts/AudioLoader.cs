@@ -18,7 +18,7 @@ public static class AudioLoader
         var source = GetSource("BackgroundAudio");
         if (source == null) return;
 
-        var clip = Resources.Load<AudioClip>($"Audio/{audioName}");
+        var clip = Resources.Load<AudioClip>($"Story/{StoryManager.SelectedStory}/Audio/{audioName}");
         if (clip != null)
         {
             source.Stop();
@@ -39,7 +39,7 @@ public static class AudioLoader
         var source = GetSource("VoiceAudio");
         if (source == null) return;
 
-        var clip = Resources.Load<AudioClip>($"Audio/{audioName}");
+        var clip = Resources.Load<AudioClip>($"Story/{StoryManager.SelectedStory}/Audio/{audioName}");
         if (clip != null)
         {
             source.Stop();

@@ -35,7 +35,7 @@ public static class ScriptLoaderTxtAsXml
 {
     public static List<StoryBlock> LoadStoryBlocks()
     {
-        var asset = Resources.Load<TextAsset>("Story/story");
+        var asset = Resources.Load<TextAsset>($"Story/{StoryManager.SelectedStory}/story");
         if (asset == null)
         {
             Debug.LogError("No se encontró Resources/Story/story.txt");

@@ -65,7 +65,7 @@ public class Scene01Events : MonoBehaviour
                 if (!string.IsNullOrEmpty(img.AudioName))
                 {
                     backgroundAudio.loop = true;
-                    var bgClip = Resources.Load<AudioClip>($"Audio/{img.AudioName}");
+                    var bgClip = Resources.Load<AudioClip>($"Story/{StoryManager.SelectedStory}/Audio/{img.AudioName}");
                     if (bgClip != null)
                     {
                         backgroundAudio.clip = bgClip;
@@ -85,7 +85,7 @@ public class Scene01Events : MonoBehaviour
                 }
                 else
                 {
-                    var sprite = Resources.Load<Sprite>($"Images/Characters/{line.Speaker.ToLower()}");
+                    var sprite = Resources.Load<Sprite>($"Story/{StoryManager.SelectedStory}/Images/Characters/{line.Speaker.ToLower()}");
                     if (sprite != null)
                     {
                         portraitImage.sprite = sprite;
@@ -106,7 +106,7 @@ public class Scene01Events : MonoBehaviour
                 {
                     voiceAudio.Stop();
                     voiceAudio.loop = false;
-                    var voiceClip = Resources.Load<AudioClip>($"Audio/{line.AudioName}");
+                    var voiceClip = Resources.Load<AudioClip>($"Story/{StoryManager.SelectedStory}/Audio/{line.AudioName}");
                     if (voiceClip != null)
                     {
                         voiceAudio.clip = voiceClip;

@@ -7,7 +7,7 @@ public static class ImageLoader
     {
         if (string.IsNullOrEmpty(imageName)) return;
 
-        var sprite = Resources.Load<Sprite>($"Images/Background/{imageName}");
+        var sprite = Resources.Load<Sprite>($"Story/{StoryManager.SelectedStory}/Images/Background/{imageName}");
         var img = GameObject.Find("SceneImage").GetComponent<Image>();
 
         if (sprite != null)

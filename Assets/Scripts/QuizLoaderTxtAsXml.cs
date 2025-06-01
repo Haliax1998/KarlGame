@@ -10,7 +10,7 @@ public static class QuizLoaderTxtAsXml
         var all = new List<QuestionData>();
 
         // Lee todos los .txt en Resources/Questions
-        foreach (var file in Resources.LoadAll<TextAsset>("Questions"))
+        foreach (var file in Resources.LoadAll<TextAsset>($"Story/{StoryManager.SelectedStory}/Questions"))
         {
             var doc = XDocument.Parse(file.text);
             var topic = (string)doc.Root.Attribute("topic") ?? "General";
