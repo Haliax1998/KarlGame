@@ -11,8 +11,7 @@ public class Scene01Events : MonoBehaviour
     AudioSource backgroundAudio;
     AudioSource voiceAudio;
     private bool isLogOpen = false;
-
-
+    private bool clickedInArea = false;
 
     [SerializeField] string textToSpeak;
     [SerializeField] int currentTextLength;
@@ -38,24 +37,17 @@ public class Scene01Events : MonoBehaviour
         backgroundAudio = GameObject.Find("BackgroundAudio").GetComponent<AudioSource>();
         voiceAudio = GameObject.Find("VoiceAudio").GetComponent<AudioSource>();
         StartCoroutine(EventStarter());
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
-        HistoryLog.AddEntry("Narrador", "Esto es una línea de prueba para el log largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo largo.", null);
 
     }
 
+
+    public void RegisterClick()
+    {
+        if (!isLogOpen)
+        {
+            clickedInArea = true;
+        }
+    }
     IEnumerator EventStarter()
     {
         yield return new WaitForSeconds(1);
@@ -132,7 +124,8 @@ public class Scene01Events : MonoBehaviour
             // Espera al typewriter
                 yield return new WaitUntil(() => textLength == currentTextLength);
                 // Pausa antes de la siguiente línea
-                yield return new WaitUntil(() => Input.GetMouseButtonDown(0) && !isLogOpen);
+                clickedInArea = false;
+                yield return new WaitUntil(() => clickedInArea);
             }
         }
 

@@ -4,6 +4,7 @@ public class ShowLogButton : MonoBehaviour
 {
     [SerializeField] public GameObject logPanel;
     [SerializeField] Scene01Events sceneController;
+    [SerializeField] public GameObject logButton;
 
     public void ShowLog()
     {
@@ -11,6 +12,8 @@ public class ShowLogButton : MonoBehaviour
         {
             logPanel.SetActive(true);
             sceneController.SetLogOpen(true);
+            logButton.SetActive(false);
+
         }
     }
 
@@ -20,6 +23,7 @@ public class ShowLogButton : MonoBehaviour
         {
             logPanel.SetActive(false);
             sceneController.SetLogOpen(false);
+            logButton.SetActive(true);
         }
     }
 }
