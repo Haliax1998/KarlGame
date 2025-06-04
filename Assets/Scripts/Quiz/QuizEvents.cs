@@ -9,6 +9,8 @@ using Unity.Burst.CompilerServices;
 
 public class QuizEvents : MonoBehaviour
 {
+    private int _correctAnswers = 0;
+
     [Header("Transiciones")]
     [SerializeField] private GameObject fadeIn;
 
@@ -18,6 +20,7 @@ public class QuizEvents : MonoBehaviour
 
     [SerializeField] private Button hintButton;
     [SerializeField] private Button eliminateButton;
+
 
 
     [Header("UI de Quiz")]
@@ -174,7 +177,11 @@ public class QuizEvents : MonoBehaviour
 
         // Sumar 20 puntos si acierta
         if (correct)
+        {
             _score += 20;
+            _correctAnswers++;
+        }
+            
 
         string tag = $"{_score} puntos";
         markText.text = tag;
@@ -216,7 +223,9 @@ public class QuizEvents : MonoBehaviour
 
     private void EndQuiz()
     {
-        questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_score}/{_questions.Count}";
+        float percentage = ((float)_correctAnswers / _questions.Count) * 100f;
+        questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_correctAnswers}/{_questions.Count} ({percentage:F1}%)";
+
 
         // Oculta botones
         foreach (var go in optionButtonObjects)
