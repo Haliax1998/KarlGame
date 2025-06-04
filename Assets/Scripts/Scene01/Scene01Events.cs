@@ -34,6 +34,12 @@ public class Scene01Events : MonoBehaviour
 
     void Start()
     {
+        var music = GameObject.FindObjectOfType<MenuMusic>();
+        if (music != null)
+        {
+            Destroy(music.gameObject);  // Detiene la música del menú
+        }
+
         // Carga todas las líneas de la historia
         storyBlocks = ScriptLoaderTxtAsXml.LoadStoryBlocks();
         backgroundAudio = GameObject.Find("BackgroundAudio").GetComponent<AudioSource>();

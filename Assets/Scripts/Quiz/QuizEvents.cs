@@ -54,6 +54,12 @@ public class QuizEvents : MonoBehaviour
 
     void Start()
     {
+        var music = GameObject.FindObjectOfType<MenuMusic>();
+        if (music != null)
+        {
+            Destroy(music.gameObject);  // Detiene la música del menú
+        }
+
         // 1) Carga y mezcla todas las preguntas
         _questions = QuizLoaderTxtAsXml.LoadAllQuestions()
                        .OrderBy(_ => Random.value)

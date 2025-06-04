@@ -22,6 +22,7 @@ public class StorySelector : MonoBehaviour
             fadeOut.SetActive(true);
         }
         yield return new WaitForSeconds(delay);
+
         SceneManager.LoadScene(targetScene);
     }
 }
