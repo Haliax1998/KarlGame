@@ -24,7 +24,7 @@ public class QuizEvents : MonoBehaviour
     [SerializeField] private GameObject[] optionButtonObjects;
 
     [Tooltip("TextMeshPro para mostrar la pista")]
-    [SerializeField] private TextMeshProUGUI hintText;
+    [SerializeField] private TextMeshProUGUI markText;
 
     [Tooltip("TextMeshProUGUI donde se mostrará el puntaje al final")]
     [SerializeField] private TextMeshProUGUI scoreText;
@@ -71,7 +71,6 @@ public class QuizEvents : MonoBehaviour
     {
         var q = _questions[index];
         questionText.text = $"[{q.topic}] {q.question}";
-        hintText.text = "";
 
         var indices = Enumerable.Range(0, q.options.Length)
                                 .OrderBy(_ => Random.value)
@@ -104,6 +103,7 @@ public class QuizEvents : MonoBehaviour
 
             // 4) Asegúrate de que esté habilitado
             btn.interactable = true;
+            label.color = Color.white;
         }
     }
 
@@ -112,27 +112,35 @@ public class QuizEvents : MonoBehaviour
         var q = _questions[_currentIndex];
         bool correct = chosenIndex == _displayedCorrectIndex;
 
-
-        // 1) Incrementa puntaje si acierta
+        // Sumar 20 puntos si acierta
         if (correct)
-            _score++;
+            _score += 20;
 
-        // 2) Muestra “Correcto” o “Incorrecto” + la pista
-        string tag = correct ? "<color=green>Correcto!</color>"
-                             : "<color=red>Incorrecto.</color>";
-        // hintText.text = $"{tag}  {(correct ? q.legendaryHint : q.epicHint)}";
-
-        hintText.text = $"{tag}";
+        string tag = $"{_score} puntos";
+        markText.text = tag;
 
         Debug.Log(correct ? "¡Correcto!" : "Fallaste…");
 
-        // 3) Desactiva todos los botones
-        foreach (var go in optionButtonObjects)
-            go.GetComponent<Button>().interactable = false;
+        // Pintar botones: correctos en verde, el incorrecto seleccionado en rojo
+        for (int i = 0; i < optionButtonObjects.Length; i++)
+        {
+            var btn = optionButtonObjects[i].GetComponent<Button>();
+            var label = optionButtonObjects[i].GetComponentInChildren<TextMeshProUGUI>();
 
-        // 4) Avanza tras 1 segundo
+            btn.interactable = false;
+
+            if (i == _displayedCorrectIndex)
+                label.color = Color.green; // correcta
+            else if (i == chosenIndex)
+                label.color = Color.red; // elegida incorrecta
+            else
+                label.color = Color.black;
+        }
+
+        // Avanza tras 1 segundo
         StartCoroutine(NextQuestionAfterDelay(1f));
     }
+
 
 
     private IEnumerator NextQuestionAfterDelay(float delay)
@@ -149,14 +157,6 @@ public class QuizEvents : MonoBehaviour
     private void EndQuiz()
     {
         questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_score}/{_questions.Count}";
-        hintText.text = "";
-
-        // Muestra el score en screen
-        if (scoreText != null)
-        {
-            scoreText.gameObject.SetActive(true);
-            scoreText.text = $"{_score}/{_questions.Count}";
-        }
 
         // Oculta botones
         foreach (var go in optionButtonObjects)
