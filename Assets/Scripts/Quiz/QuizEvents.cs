@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.Burst.CompilerServices;
 
 
 public class QuizEvents : MonoBehaviour
@@ -11,12 +12,19 @@ public class QuizEvents : MonoBehaviour
     [Header("Transiciones")]
     [SerializeField] private GameObject fadeIn;
 
+    private bool usedHint = false;
+    private bool usedEliminate = false;
+    private bool helpUsedThisTurn = false;
+
+    [SerializeField] private Button hintButton;
+    [SerializeField] private Button eliminateButton;
+
+
     [Header("UI de Quiz")]
     [Tooltip("Arrastra aquí tu TextMeshProUGUI (antes SpeakText)")]
     [SerializeField] private TextMeshProUGUI questionText;
 
-    // (Opcional) si quieres activar/desactivar todo el panel de pregunta
-    [Tooltip("Arrastra aquí el contenedor de la pregunta (por ejemplo QuestionPanel)")]
+    [Tooltip("Arrastra aquí el contenedor de la pregunta")]
     [SerializeField] private GameObject questionPanel;
 
 
@@ -25,6 +33,9 @@ public class QuizEvents : MonoBehaviour
 
     [Tooltip("TextMeshPro para mostrar la pista")]
     [SerializeField] private TextMeshProUGUI markText;
+    [SerializeField] private TextMeshProUGUI hintText;
+    [SerializeField] private GameObject hint;
+
 
     [Tooltip("TextMeshProUGUI donde se mostrará el puntaje al final")]
     [SerializeField] private TextMeshProUGUI scoreText;
@@ -64,9 +75,48 @@ public class QuizEvents : MonoBehaviour
         ShowQuestion(_currentIndex);
     }
 
-    /// <summary>
-    /// Muestra en pantalla la pregunta número 'index'.
-    /// </summary>
+    private void UpdateScoreUI()
+    {
+        if (markText != null)
+            markText.text = $"{_score} puntos";
+    }
+
+
+    public void UseHint()
+    {
+        if (helpUsedThisTurn || usedHint) return;
+
+        hint.SetActive(true);
+        hintText.text = "Pista: " + _questions[_currentIndex].legendaryHint;
+        _score -= 5;
+        usedHint = true;
+        helpUsedThisTurn = true;
+        UpdateScoreUI();
+    }
+
+    public void EliminateTwoOptions()
+    {
+        if (helpUsedThisTurn || usedEliminate) return;
+
+        int hidden = 0;
+        for (int i = 0; i < optionButtonObjects.Length && hidden < 2; i++)
+        {
+            if (i != _displayedCorrectIndex)
+            {
+                optionButtonObjects[i].SetActive(false);
+                hidden++;
+            }
+        }
+
+        _score -= 10;
+        usedEliminate = true;
+        helpUsedThisTurn = true;
+        UpdateScoreUI();
+    }
+
+
+
+
     private void ShowQuestion(int index)
     {
         var q = _questions[index];
@@ -105,6 +155,16 @@ public class QuizEvents : MonoBehaviour
             btn.interactable = true;
             label.color = Color.white;
         }
+
+        helpUsedThisTurn = false;
+        usedHint = false;
+        usedEliminate = false;
+        hintText.text = "";
+        hint.SetActive(false);
+
+        foreach (var go in optionButtonObjects)
+            go.SetActive(true);
+
     }
 
     private void OnOptionSelected(int chosenIndex)
