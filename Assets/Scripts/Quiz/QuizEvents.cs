@@ -74,8 +74,12 @@ public class QuizEvents : MonoBehaviour
         // 2) Muestra el panel de pregunta (si lo tienes oculto)
         if (questionPanel != null) questionPanel.SetActive(true);
 
+        eliminateButton.gameObject.SetActive(true);
+        hintButton.gameObject.SetActive(true);
+
         // 3) Pinta pregunta
         ShowQuestion(_currentIndex);
+
     }
 
     private void UpdateScoreUI()
@@ -225,6 +229,8 @@ public class QuizEvents : MonoBehaviour
     {
         float percentage = ((float)_correctAnswers / _questions.Count) * 100f;
         questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_correctAnswers}/{_questions.Count} ({percentage:F1}%)";
+        eliminateButton.gameObject.SetActive(false);
+        hintButton.gameObject.SetActive(false);
 
 
         // Oculta botones
