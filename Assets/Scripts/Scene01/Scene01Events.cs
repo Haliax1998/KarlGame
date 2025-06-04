@@ -22,6 +22,8 @@ public class Scene01Events : MonoBehaviour
     [SerializeField] int eventPos = 0;
     [SerializeField] GameObject fadeIn;
     [SerializeField] GameObject fadeOut;
+    [SerializeField] private GameObject endPanel;
+
 
     List<StoryBlock> storyBlocks;
 
@@ -132,7 +134,7 @@ public class Scene01Events : MonoBehaviour
 
 
         // Al terminar toda la historia
-        nextButton.SetActive(true);
+        endPanel.SetActive(true);
         eventPos = 1;
         Debug.Log("[Scene01] Historia completa.");
     }
@@ -144,6 +146,20 @@ public class Scene01Events : MonoBehaviour
         SceneManager.LoadScene(3);
         Debug.Log("[Scene01] Boton presionado");
     }
+
+    IEnumerator ReloadCurrentScene()
+    {
+        fadeOut.SetActive(true);
+        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void RetryStory()
+    {
+        Debug.Log("[Scene01] Reiniciando historia...");
+        StartCoroutine(ReloadCurrentScene());
+    }
+
 
     public void NextButton()
     {
