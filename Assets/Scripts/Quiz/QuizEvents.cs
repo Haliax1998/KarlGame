@@ -11,6 +11,18 @@ public class QuizEvents : MonoBehaviour
 {
     private int _correctAnswers = 0;
 
+
+    [SerializeField] private GameObject resultPanel;
+    [SerializeField] private Button retryButton;
+    [SerializeField] private Button backButton;
+    //[SerializeField] private Image medalImage;
+    //[SerializeField] private Sprite bronzeMedal;
+    //[SerializeField] private Sprite silverMedal;
+    //[SerializeField] private Sprite goldMedal;
+    [SerializeField] private TextMeshProUGUI resultMessageText;
+
+
+
     [Header("Transiciones")]
     [SerializeField] private GameObject fadeIn;
 
@@ -234,15 +246,67 @@ public class QuizEvents : MonoBehaviour
     private void EndQuiz()
     {
         float percentage = ((float)_correctAnswers / _questions.Count) * 100f;
-        questionText.text = $"¡Quiz terminado!\nRespuestas correctas: {_correctAnswers}/{_questions.Count} ({percentage:F1}%)";
         eliminateButton.gameObject.SetActive(false);
         hintButton.gameObject.SetActive(false);
 
-
-        // Oculta botones
         foreach (var go in optionButtonObjects)
             go.SetActive(false);
+
+        // Mostrar resultados
+        resultPanel.SetActive(true);
+        questionText.text = $"¡Quiz terminado!\n{_correctAnswers}/{_questions.Count} ({percentage:F1}%)";
+
+        // Evaluar medalla
+        if (percentage >= 90)
+        {
+            // medalImage.sprite = goldMedal;
+            resultMessageText.text = "¡Excelente! Has ganado una medalla de oro.";
+        }
+        else if (percentage >= 80)
+        {
+            // medalImage.sprite = silverMedal;
+            resultMessageText.text = "¡Buen trabajo! Medalla de plata obtenida.";
+        }
+        else if (percentage >= 70)
+        {
+            // medalImage.sprite = bronzeMedal;
+            resultMessageText.text = "Aprobaste con una medalla de bronce.";
+        }
+        else
+        {
+            // medalImage.enabled = false;
+            resultMessageText.text = "Necesitas estudiar más. Puedes intentarlo de nuevo.";
+        }
+
+        // Activar botón de reintento si <70%
+        retryButton.gameObject.SetActive(percentage < 70);
+
+        // Guardar puntaje C:\Users\PC\AppData\LocalLow\DefaultCompany\
+        SaveScoreToFile(percentage);
     }
+
+    private void SaveScoreToFile(float percentage)
+    {
+        string path = Application.persistentDataPath + "/quiz_scores.txt";
+        string storyName = StoryManager.SelectedStory;
+        // Formato CSV: Historia;RespuestasCorrectas;TotalPreguntas;Porcentaje;FechaHora
+        string line = $"{storyName};{_correctAnswers};{_questions.Count};{percentage:F1};{System.DateTime.Now:yyyy-MM-dd HH:mm:ss}\n";
+   
+        // Formato humano
+        // string line = $"{storyName}: {_correctAnswers}/{_questions.Count} ({percentage:F1}%) - {System.DateTime.Now}\n";
+        System.IO.File.AppendAllText(path, line);
+    }
+
+    public void RetryQuiz()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    public void GoToStorySelector()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+    }
+
 
 
 }
