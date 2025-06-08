@@ -15,10 +15,10 @@ public class QuizEvents : MonoBehaviour
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private Button retryButton;
     [SerializeField] private Button backButton;
-    //[SerializeField] private Image medalImage;
-    //[SerializeField] private Sprite bronzeMedal;
-    //[SerializeField] private Sprite silverMedal;
-    //[SerializeField] private Sprite goldMedal;
+    [SerializeField] private Image medalImage;
+    [SerializeField] private Sprite bronzeMedal;
+    [SerializeField] private Sprite silverMedal;
+    [SerializeField] private Sprite goldMedal;
     [SerializeField] private TextMeshProUGUI resultMessageText;
 
 
@@ -259,22 +259,22 @@ public class QuizEvents : MonoBehaviour
         // Evaluar medalla
         if (percentage >= 90)
         {
-            // medalImage.sprite = goldMedal;
+            medalImage.sprite = goldMedal;
             resultMessageText.text = "¡Excelente! Has ganado una medalla de oro.";
         }
         else if (percentage >= 80)
         {
-            // medalImage.sprite = silverMedal;
+            medalImage.sprite = silverMedal;
             resultMessageText.text = "¡Buen trabajo! Medalla de plata obtenida.";
         }
         else if (percentage >= 70)
         {
-            // medalImage.sprite = bronzeMedal;
+            medalImage.sprite = bronzeMedal;
             resultMessageText.text = "Aprobaste con una medalla de bronce.";
         }
         else
         {
-            // medalImage.enabled = false;
+            medalImage.enabled = false;
             resultMessageText.text = "Necesitas estudiar más. Puedes intentarlo de nuevo.";
         }
 
