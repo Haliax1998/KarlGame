@@ -256,26 +256,38 @@ public class QuizEvents : MonoBehaviour
         resultPanel.SetActive(true);
         questionText.text = $"¡Quiz terminado!\n{_correctAnswers}/{_questions.Count} ({percentage:F1}%)";
 
+        bool showMedal = false;
+
         // Evaluar medalla
         if (percentage >= 90)
         {
             medalImage.sprite = goldMedal;
             resultMessageText.text = "¡Excelente! Has ganado una medalla de oro.";
+            showMedal = true;
         }
         else if (percentage >= 80)
         {
             medalImage.sprite = silverMedal;
             resultMessageText.text = "¡Buen trabajo! Medalla de plata obtenida.";
+            showMedal = true;
         }
         else if (percentage >= 70)
         {
             medalImage.sprite = bronzeMedal;
             resultMessageText.text = "Aprobaste con una medalla de bronce.";
+            showMedal = true;
         }
         else
         {
             medalImage.enabled = false;
             resultMessageText.text = "Necesitas estudiar más. Puedes intentarlo de nuevo.";
+        }
+
+        // Mover el botón solo si hay medalla
+        if (showMedal)
+        {
+            var rt = backButton.GetComponent<RectTransform>();
+            rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, -280);
         }
 
         // Activar botón de reintento si <70%
