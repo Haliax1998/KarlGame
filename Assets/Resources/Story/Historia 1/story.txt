@@ -56,7 +56,7 @@
  <!-- Escena 7: A bordo del Huáscar, meses después -->
  <image name="grau_escribiendo_carta_camarote" audio="ambiente"  />
  <text speaker="Narrador">**A bordo del Huáscar, océano Pacífico - Julio de 1879**</text>
- <text speaker="Narrador">En su camarote, bajo la luz de una lámpara que se balancea con el movimiento del buque, Miguel Grau redacta una carta que demostrará su hidalguía incluso en tiempos de guerra. Este gesto de caballerosidad hacia la viuda del enemigo caído se convertirá en uno de los actos más nobles de la historia militar americana.</text>
+ <text speaker="Narrador">En su camarote, bajo la luz de una lámpara que se balancea con el movimiento del buque, Miguel Grau redacta una carta que demostrará su hidalguía incluso en tiempos de guerra. Este gesto de caballerosidad hacia la viuda del enemigo caído se convertirá en uno de los actos más nobles de la historia militar.</text>
  <text speaker="Miguel Grau">Señora, tengo el honor de remitirle la espada y demás objetos de su esposo, el valiente comandante Prat. Murió como un héroe digno de la patria que defendía.</text>
  <text speaker="Narrador">Grau convierte al 'Huáscar' en el terror de las costas chilenas durante cinco meses, realizando incursiones audaces desde Antofagasta hasta Valparaíso, pero su nobleza lo distingue incluso ante el enemigo, ganándose el respeto universal.</text>
 
@@ -148,7 +148,7 @@
  <text speaker="Narrador">En la sierra peruana nace una guerra de características únicas en América. Los campesinos indígenas, que conocen cada sendero, cada cueva y cada paso de montaña, se convierten en los mejores aliados de la resistencia patriótica, transformando el paisaje andino en una fortaleza natural.</text>
 
  <!-- Escena 16: Batalla de La Breña, julio de 1882 -->
- <image name="batalla_guerrillas_territorio_serrano" audio="batalla" />
+ <image name="batalla_guerrillas_territorio_serrano_2" audio="batalla" />
  <text speaker="Narrador">**La Breña, sierra central del Perú - Julio de 1882**</text>
  <text speaker="Narrador">En este territorio montañoso, Cáceres libra la 'Campaña de la Breña', una serie de combates donde el conocimiento del terreno y el apoyo popular se convierten en armas decisivas. Las victorias en Pucará, Marcavalle y Concepción demuestran que la resistencia peruana está lejos de rendirse.</text>
  <text speaker="Coronel Cáceres">¡Conocemos estas montañas mejor que nadie! ¡Atacamos!</text>
@@ -157,7 +157,7 @@
  <text speaker="Narrador">La Campaña de la Breña transforma a Cáceres en una leyenda viviente. Sus victorias en territorio serrano demuestran que el espíritu peruano permanece invicto, obligando a Chile a reconocer que la ocupación total del Perú es prácticamente imposible.</text>
 
  <!-- Escena 17: El final de la guerra -->
- <image name="firma_tratado_ancon_1883" />
+ <image name="firma_tratado_ancon_1883" audio="ambiente" />
  <text speaker="Narrador">**Ancón, cerca de Lima - 20 de octubre de 1883**</text>
  <text speaker="Narrador">Después de más de cuatro años de guerra, las negociaciones de paz culminan en este balneario al norte de Lima. El Tratado de Ancón, firmado el 20 de octubre de 1883, establece las nuevas fronteras: Perú cede definitivamente la provincia de Tarapacá a Chile, mientras que Tacna y Arica quedan bajo administración chilena por diez años, tras los cuales un plebiscito decidiría su destino final.</text>
 
