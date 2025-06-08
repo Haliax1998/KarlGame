@@ -14,8 +14,12 @@ public class MainMenu : MonoBehaviour
 
     public void StartGame()
     {
-        fadeOut.SetActive(true);
         StartCoroutine(TransferToAdventureScene());
+    }
+
+    public void StartAchievement()
+    {
+        StartCoroutine(TransferToAchievementScene());
     }
 
     // Update is called once per frame
@@ -26,7 +30,13 @@ public class MainMenu : MonoBehaviour
 
     IEnumerator TransferToAdventureScene()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(0);
         SceneManager.LoadScene(1);
+    }
+
+    IEnumerator TransferToAchievementScene()
+    {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene(5);
     }
 }

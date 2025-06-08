@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashMenu.unity
     guid: 4c8572fdcd3bdb24c958f9d13bd6cbc4
+  - enabled: 1
+    path: Assets/Scenes/Achievements.unity
+    guid: 63d0a6ac0d249cf4c87dd444d01f5aaf
   m_configObjects: {}
