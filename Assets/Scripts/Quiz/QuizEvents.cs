@@ -304,7 +304,7 @@ public class QuizEvents : MonoBehaviour
 
     public void GoToStorySelector()
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 
 

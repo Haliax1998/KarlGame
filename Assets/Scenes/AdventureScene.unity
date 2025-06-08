@@ -157,8 +157,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -526, y: 256}
-  m_SizeDelta: {x: 125, y: 45}
+  m_AnchoredPosition: {x: -800, y: 470}
+  m_SizeDelta: {x: 250, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &136984068
 MonoBehaviour:
@@ -286,8 +286,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2022013236}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.011775017}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0.9999963}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -443,8 +443,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 283.76, y: 75}
-  m_SizeDelta: {x: 196.7411, y: 53.5818}
+  m_AnchoredPosition: {x: 647.26, y: 217}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &245629376
 MonoBehaviour:
@@ -622,8 +622,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 202915521}
   m_HandleRect: {fileID: 202915520}
   m_Direction: 2
-  m_Value: 1.0001426
-  m_Size: 0.988225
+  m_Value: 0
+  m_Size: 0.9999963
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -701,8 +701,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.33856, y: -0.0024948}
-  m_SizeDelta: {x: 1300, y: 600}
+  m_AnchoredPosition: {x: -2.5881, y: -2.9291}
+  m_SizeDelta: {x: 2008.2505, y: 1161.9177}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &354394556
 Animator:
@@ -851,8 +851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.32715, y: 0}
-  m_SizeDelta: {x: 1300, y: 600}
+  m_AnchoredPosition: {x: 13.0023, y: -2.9315}
+  m_SizeDelta: {x: 2039.3845, y: 1161.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &516190152
 GameObject:
@@ -888,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006237, y: 80.7}
-  m_SizeDelta: {x: 275.0061, y: 50}
+  m_AnchoredPosition: {x: 0.000015259, y: 233}
+  m_SizeDelta: {x: 817.3228, y: 219.4279}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &516190154
 MonoBehaviour:
@@ -938,8 +938,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1115,8 +1115,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 516, y: 256}
-  m_SizeDelta: {x: 125, y: 45}
+  m_AnchoredPosition: {x: 800, y: 470}
+  m_SizeDelta: {x: 250, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &532050697
 MonoBehaviour:
@@ -1305,7 +1305,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00030517578, y: -0.0024719238}
+  m_AnchoredPosition: {x: -0.00030517578, y: -0.0024414062}
   m_SizeDelta: {x: -0.00036621, y: 0.0051}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &573808104
@@ -1411,8 +1411,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0075683594, y: -86.79849}
-  m_SizeDelta: {x: 919.64, y: 643}
+  m_AnchoredPosition: {x: 31, y: 98}
+  m_SizeDelta: {x: 1636.3104, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621691847
 MonoBehaviour:
@@ -1623,7 +1623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -9.124023, y: -5.2137146}
+  m_AnchoredPosition: {x: -9.124023, y: -5.213745}
   m_SizeDelta: {x: 226.796, y: 145.9835}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &836480937
@@ -1919,8 +1919,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 595, y: 110.93}
-  m_SizeDelta: {x: 1113.3087, y: 161.91}
+  m_AnchoredPosition: {x: 973, y: 205}
+  m_SizeDelta: {x: 1801.2323, y: 294.4916}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1498076707
 MonoBehaviour:
@@ -1991,8 +1991,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 315.41492, y: 130}
-  m_SizeDelta: {x: 606.521, y: 39.2842}
+  m_AnchoredPosition: {x: 360.24, y: 256}
+  m_SizeDelta: {x: 650.11, y: 48.3607}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1543192276
 MonoBehaviour:
@@ -2041,8 +2041,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2259,8 +2259,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.82, y: -237.69977}
-  m_SizeDelta: {x: 919.64, y: 643}
+  m_AnchoredPosition: {x: 818.1552, y: -119.99903}
+  m_SizeDelta: {x: 1636.3104, y: 44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1639667503
 MonoBehaviour:
@@ -2284,7 +2284,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -2295,26 +2295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\r\n <image name=\"bolognesi_espada_alto_defensa\" />\r\n <text speaker=\"Narrador\">En
-    el 'Campo de la Alianza', las fuerzas aliadas son derrotadas. Bolivia se retira
-    de la guerra.</text>\r\n\r\n <text speaker=\"Narrador\">La derrota en Tacna es
-    devastadora para la alianza. Bolivia, agotada y sin esperanzas, abandona el conflicto,
-    dejando a Per\xFA solo frente al poder\xEDo chileno.</text>\r\n\r\n <!-- Escena
-    12: Defensa de Arica, 7 de junio de 1880 -->\r\n <image name=\"morro_arica_soldados_defendiendo\"
-    />\r\n <text speaker=\"Coronel Francisco Bolognesi\">\xA1Defendamos Arica hasta
-    el \xFAltimo hombre!</text>\r\n\r\n <image name=\"asalto_final_morro_arica\"
-    />\r\n <text speaker=\"Narrador\">Tras heroica resistencia, Arica cae. El coronel
-    Bolognesi muere defendiendo la plaza. Alfonso Ugarte se lanza al precipicio antes
-    que entregar la bandera.</text>\r\n\r\n <image name=\"ugarte_saltando_morro_bandera\"
-    />\r\n <text speaker=\"Narrador\">El Morro de Arica se convierte en s\xEDmbolo
-    del hero\xEDsmo peruano. La muerte de Bolognesi y el sacrificio de Ugarte quedan
-    grabados para siempre en la memoria nacional como ejemplos supremos de honor
-    y patriotismo.</text>\r\n\r\n <!-- Escena 13: Campa\xF1a de Lima, enero de 1881
-    -->\r\n <image name=\"panoramica_lima_tropas_chilenas\" />\r\n <text speaker=\"Narrador\">Chile
-    decide atacar Lima, la capital del Per\xFA. Las batallas de San Juan y Miraflores
-    ser\xE1n decisivas.</text>\r\n\r\n <image name=\"batalla_san_juan_soldados\"
-    />\r\n <text speaker=\"Reservista peruano\">\xA1Defenderemos nuestra capital!
-    \xA1Que viva el Per\xFA!</text>"
+  m_Text: 
 --- !u!222 &1639667504
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2485,8 +2466,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 162.07437, y: 120}
-  m_SizeDelta: {x: 298.8379, y: 2.7549}
+  m_AnchoredPosition: {x: 337.71368, y: 220}
+  m_SizeDelta: {x: 650.1053, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1848974694
 MonoBehaviour:
@@ -2669,8 +2650,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 600}
+  m_AnchoredPosition: {x: 0.000061035, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1907391592
 CanvasRenderer:
@@ -2965,8 +2946,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 283.76, y: 140}
-  m_SizeDelta: {x: 196.74, y: 53.5818}
+  m_AnchoredPosition: {x: 647.26, y: 402}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2017356785
 MonoBehaviour:
@@ -3133,7 +3114,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.32715, y: 20}
-  m_SizeDelta: {x: 400, y: 400}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2063933936
 CanvasRenderer:
@@ -3208,8 +3189,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 557.38544, y: 59.617935}
-  m_SizeDelta: {x: 1085.5076, y: 90.9213}
+  m_AnchoredPosition: {x: 900.62, y: 121}
+  m_SizeDelta: {x: 1730.8733, y: 168.3369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2111482293
 MonoBehaviour:
@@ -3258,8 +3239,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
