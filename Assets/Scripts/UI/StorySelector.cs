@@ -25,4 +25,9 @@ public class StorySelector : MonoBehaviour
 
         SceneManager.LoadScene(targetScene);
     }
+
+    public void GoToStorySelector()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
 }
