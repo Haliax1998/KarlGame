@@ -27,10 +27,27 @@ public class Scene01Events : MonoBehaviour
 
     List<StoryBlock> storyBlocks;
 
+
+    [SerializeField] private GameObject pauseMenuPanel;
+    [SerializeField] private string mainMenuSceneName = "MainMenu";
+
+    private bool isPaused = false;
+
+
     void Update()
     {
         textLength = TextCreator.charCount;
+
+        // Detectar ESC
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (!isPaused)
+                PauseGame();
+            else
+                ResumeGame();
+        }
     }
+
 
     void Start()
     {
@@ -180,6 +197,26 @@ public class Scene01Events : MonoBehaviour
     public void SetLogOpen(bool state)
     {
         isLogOpen = state;
+    }
+    
+    public void PauseGame()
+    {
+        isPaused = true;
+        pauseMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void ResumeGame()
+    {
+        isPaused = false;
+        pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    public void GoToMainMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 
 }

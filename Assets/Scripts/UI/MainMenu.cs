@@ -39,4 +39,15 @@ public class MainMenu : MonoBehaviour
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene(5);
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Saliendo del juego...");
+        Application.Quit();
+
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
 }
