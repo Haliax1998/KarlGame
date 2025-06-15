@@ -1,0 +1,149 @@
+<story>
+ <!-- Escena 1: La biblioteca escolar -->
+ <image name="biblioteca" audio="ambiente" />
+ <text speaker="Narrador">Al abrir la primera sección del libro, una suave brisa marina llena la biblioteca. De repente, me encuentro transportado a mediados del siglo XIX, en las costas del Perú...</text>
+
+ <image name="transicion_viaje_tiempo" audio="viaje_tiempo"/>
+ <text speaker="Narrador">El aroma del océano y el sonido de las gaviotas me envuelven mientras la realidad se transforma. Estoy a punto de presenciar una época de grandes transformaciones en la historia peruana.</text>
+
+ <!-- Escena 2: Islas Chincha, 1840 -->
+ <image name="islas_chincha_guano_aves" audio="calle" />
+ <text speaker="Narrador">**Islas Chincha, costa peruana - Año 1840**</text>
+ <text speaker="Narrador">Ante mis ojos aparecen unas islas extrañas, cubiertas completamente de una sustancia blanca que brilla bajo el sol. El aire está lleno del sonido de miles de aves marinas. Durante miles de años, estas aves han depositado sus excrementos en estas islas, creando montañas de fertilizante natural que pronto cambiarán el destino del Perú.</text>
+ <text speaker="Científico alemán">¡Increíble! Este guano acumulado durante siglos es el mejor fertilizante del mundo. Vale más que el oro para los agricultores europeos.</text>
+
+ <image name="trabajadores_extrayendo_guano" audio="ambiente" />
+ <text speaker="Narrador">La Revolución Industrial en Europa ha aumentado enormemente la demanda de fertilizantes para alimentar a las crecientes poblaciones urbanas. El guano peruano, con su alta concentración de nitrógeno, fósforo y potasio, se ha convertido en el "oro blanco" más codiciado del mundo.</text>
+
+ <!-- Escena 3: Lima, Palacio de Gobierno, 1845 -->
+ <image name="palacio_gobierno_lima_castilla" audio="calle" />
+ <text speaker="Narrador">**Palacio de Gobierno, Lima - Año 1845**</text>
+ <text speaker="Narrador">En el corazón de Lima, el presidente Ramón Castilla revisa informes que cambiarán para siempre el destino del Perú. Las primeras exportaciones de guano han demostrado su increíble potencial económico, y el gobierno debe decidir cómo administrar esta nueva riqueza nacional.</text>
+ <text speaker="Presidente Castilla">Señores, este guano será la salvación del Perú. Debemos administrarlo sabiamente para desarrollar nuestro país.</text>
+ <text speaker="Ministro de Hacienda">Las exportaciones de guano ya generan ingresos enormes, Excelencia. Podemos pagar nuestras deudas y construir ferrocarriles.</text>
+
+ <image name="grafico_exportaciones_guano" audio="industria" />
+ <text speaker="Narrador">Los números son asombrosos: en pocos años, las exportaciones de guano han crecido exponencialmente, convirtiendo al Perú en uno de los principales acreedores de la deuda externa latinoamericana. Esta bonanza económica parece infinita.</text>
+
+ <!-- Escena 4: Puerto del Callao, 1850 -->
+ <image name="puerto_callao_barcos_guano" audio="calle" />
+ <text speaker="Narrador">**Puerto del Callao, Perú - Año 1850**</text>
+ <text speaker="Narrador">El puerto del Callao se ha transformado en uno de los más activos del Pacífico. Docenas de barcos de todas las nacionalidades esperan su turno para cargar el preciado guano. El comercio internacional ha puesto los ojos en el Perú, y el país se siente por primera vez verdaderamente conectado con el mundo.</text>
+ <text speaker="Trabajador del puerto">¡Nunca había visto tantos barcos extranjeros! Vienen de Inglaterra, Francia, Estados Unidos... todos quieren nuestro guano.</text>
+ <text speaker="Comerciante">Los consignatarios se están volviendo millonarios. Don Domingo Elías y la casa Gibbs manejan todo el negocio.</text>
+
+ <image name="barcos_diferentes_nacionalidades" audio="comercio_internacional" />
+ <text speaker="Narrador">Este bullicio comercial representa más que simple actividad económica: es el símbolo de un Perú que emerge de las guerras de independencia y se proyecta hacia la modernidad. Sin embargo, ya se perfilan los riesgos de depender de un solo producto.</text>
+
+ <!-- Escena 5: Hacienda en la costa, 1855 -->
+ <image name="coolies_chinos_trabajando" audio="ambiente" />
+ <text speaker="Narrador">**Islas guaneras, costa peruana - Año 1855**</text>
+ <text speaker="Narrador">La extracción del guano requiere mucha mano de obra en condiciones extremadamente difíciles. Miles de trabajadores chinos, llamados 'coolíes', llegan al Perú bajo contratos que muchas veces esconden condiciones de semiesclavitud. El trabajo bajo el sol abrasador y los gases tóxicos del guano cobra un precio humano terrible.</text>
+ <text speaker="Coolí chino">Vinimos engañados... prometieron buenas condiciones, pero esto es muy duro.</text>
+ <text speaker="Capataz">¡Más rápido! Estos barcos no pueden esperar. Europa necesita el guano para sus cultivos.</text>
+
+ <image name="condiciones_laborales_extremas" audio="calle" />
+ <text speaker="Narrador">Detrás de la prosperidad nacional se oculta una realidad dolorosa: la explotación de trabajadores que arriesgan su salud y su vida para extraer la riqueza que transformará al Perú. Esta contradicción marcará profundamente la era guanera.</text>
+
+ <!-- Escena 6: Lima, casa de un consignatario, 1860 -->
+ <image name="mansion_limeña_lujo_europeo" audio="reflexion" />
+ <text speaker="Narrador">**Barrio aristocrático de Lima - Año 1860**</text>
+ <text speaker="Narrador">En los elegantes salones de Lima, la élite consignataria disfruta de una prosperidad sin precedentes. Las ganancias del guano han permitido importar no solo productos, sino todo un estilo de vida europeo. Sin embargo, esta riqueza se concentra en muy pocas manos mientras la mayoría de la población permanece en la pobreza.</text>
+ <text speaker="Consignatario rico">Con las ganancias del guano hemos transformado Lima. Miren estas calles empedradas, el alumbrado a gas, los nuevos edificios...</text>
+ <text speaker="Esposa del consignatario">¡Y estos vestidos de París! El guano nos ha dado la vida europea que siempre soñamos.</text>
+
+ <image name="calles_lima_modernizadas" audio="industria" />
+ <text speaker="Narrador">Lima se moderniza rápidamente: gas para el alumbrado público, agua potable, calles empedradas y edificios de estilo europeo. Pero esta modernización es superficial y no llega a las mayorías populares. Se está creando una sociedad de enormes contrastes.</text>
+
+ <!-- Escena 7: Estación de ferrocarril, 1870 -->
+ <image name="inauguracion_ferrocarril_lima_callao" audio="victoria" />
+ <text speaker="Narrador">**Estación de ferrocarril, Lima - Año 1870**</text>
+ <text speaker="Narrador">La inauguración del ferrocarril representa el símbolo máximo del progreso guanero. Con los ingresos del guano, el Perú puede permitirse obras de infraestructura que parecían imposibles. El sueño de conectar la costa con la sierra a través del ferrocarril más audaz del mundo está a punto de hacerse realidad.</text>
+ <text speaker="Presidente José Balta">¡Este ferrocarril es el símbolo del progreso peruano! Conectaremos todo el país con líneas férreas.</text>
+ <text speaker="Henry Meiggs">Señor Presidente, con los ingresos del guano construiremos el ferrocarril más espectacular del mundo, de Lima a Huancayo, atravesando los Andes.</text>
+
+ <image name="construccion_ferrocarril_central_andes" audio="calle" />
+ <text speaker="Narrador">El ferrocarril central será una proeza de ingeniería que desafiará las montañas más altas del mundo. Pero su construcción costará fortunas que superan incluso los ingresos del guano, hipotecando el futuro del país.</text>
+
+ <!-- Escena 8: Oficina del Ministro de Hacienda, 1872 -->
+ <image name="ministro_preocupado_documentos" audio="tension" />
+ <text speaker="Narrador">**Ministerio de Hacienda, Lima - Año 1872**</text>
+ <text speaker="Narrador">En las oficinas del gobierno, los números empiezan a mostrar una realidad preocupante. El país ha gastado más de lo que ha ingresado, confiando en que las ganancias del guano continuarían indefinidamente. La deuda externa ha crecido peligrosamente y las reservas de guano muestran signos de agotamiento.</text>
+ <text speaker="Ministro">Las cuentas no cuadran... hemos gastado más de lo que producimos. La deuda externa ha crecido enormemente.</text>
+ <text speaker="Asesor">Señor Ministro, hemos hipotecado el futuro del guano. Si bajan las exportaciones, estaremos en bancarrota.</text>
+
+ <image name="graficos_deuda_externa_creciente" audio="tension" />
+ <text speaker="Narrador">Los gráficos son alarmantes: mientras los ingresos del guano se estabilizan, los gastos públicos han crecido exponencialmente. El Perú se ha endeudado confiando en un recurso que no es infinito, creando una bomba de tiempo financiera.</text>
+
+ <!-- Escena 9: Desierto de Atacama, 1875 -->
+ <image name="trabajadores_extrayendo_salitre_desierto" audio="ambiente" />
+ <text speaker="Narrador">**Desierto de Atacama, territorio peruano de Tarapacá - Año 1875**</text>
+ <text speaker="Narrador">Mientras el guano se agota, aparece un nuevo recurso promisorio: el salitre del desierto de Atacama. Este "oro blanco" del desierto tiene los mismos usos que el guano y promete continuar la prosperidad peruana. Sin embargo, la mayoría de las empresas extractoras son chilenas, creando un peligroso desequilibrio en territorios peruanos.</text>
+ <text speaker="Ingeniero">El salitre es tan valioso como el guano. Se usa para fabricar fertilizantes y pólvora. Estas tierras de Tarapacá valen una fortuna.</text>
+ <text speaker="Trabajador">Pero la mayoría de las empresas salitreras son chilenas... aunque estemos en territorio peruano.</text>
+
+ <image name="oficinas_salitreras_bandera_peruana" audio="tension" />
+ <text speaker="Narrador">Esta situación crea tensiones peligrosas: territorio peruano explotado por capitales chilenos genera conflictos que pronto escalarán hacia una confrontación internacional. El salitre se está convirtiendo en semilla de guerra.</text>
+
+ <!-- Escena 10: Salón de una mansión limeña, 1876 -->
+ <image name="fiesta_elite_limeña" audio="reflexion" />
+ <text speaker="Narrador">**Salón aristocrático, Lima - Año 1876**</text>
+ <text speaker="Narrador">En los salones de la élite limeña ya se percibe nostalgia por los tiempos dorados que parecen llegar a su fin. La "prosperidad falaz" del guano ha creado una generación acostumbrada al lujo fácil, pero que no ha desarrollado industrias ni instituciones sólidas para el futuro.</text>
+ <text speaker="Dama de la sociedad">¡Qué tiempos aquellos! Comprábamos todo en París, nuestros hijos estudiaban en Europa...</text>
+ <text speaker="Caballero aristócrata">Sí, pero vivíamos en una burbuja. Mientras nosotros derrochábamos, el pueblo seguía en la pobreza.</text>
+
+ <image name="contraste_riqueza_lima_pobreza_rural" audio="industria" />
+ <text speaker="Narrador">El contraste es evidente: mientras Lima se europeiza, el resto del país permanece en condiciones coloniales. La riqueza del guano no ha logrado crear una prosperidad nacional verdadera, sino una modernización superficial y desigual.</text>
+
+ <!-- Escena 11: Oficina gubernamental, 1878 -->
+ <image name="funcionarios_estadisticas_preocupados" audio="reflexion" />
+ <text speaker="Narrador">**Oficina de Estadísticas, Lima - Año 1878**</text>
+ <text speaker="Narrador">Los informes gubernamentales confirman los peores temores: las reservas de guano de mejor calidad están prácticamente agotadas. Al mismo tiempo, otros países han desarrollado fertilizantes sintéticos y nuevas fuentes de guano, reduciendo la demanda del producto peruano. La crisis es inevitable.</text>
+ <text speaker="Funcionario">Las reservas de guano se están agotando. Los depósitos más ricos ya fueron explotados.</text>
+ <text speaker="Otro funcionario">Y la competencia es feroz. Australia y otros países también producen fertilizantes ahora.</text>
+
+ <image name="grafico_disminucion_exportaciones" audio="industria" />
+ <text speaker="Narrador">Las estadísticas son implacables: las exportaciones de guano han comenzado su declive irreversible. El Perú debe enfrentar una nueva realidad: la era de la riqueza fácil ha terminado y el país no está preparado para la transición.</text>
+
+ <!-- Escena 12: Plaza de Armas de Lima, 1879 -->
+ <image name="multitud_leyendo_periodicos_crisis" audio="tension" />
+ <text speaker="Narrador">**Plaza de Armas, Lima - Año 1879**</text>
+ <text speaker="Narrador">La crisis económica ya es de conocimiento público. En las calles de Lima, la población lee con preocupación las noticias sobre el fin del boom del guano. El país que se creyó próspero para siempre descubre su vulnerabilidad y su dependencia excesiva de un solo recurso.</text>
+ <text speaker="Vendedor de periódicos">¡Lea las últimas noticias! ¡Crisis económica! ¡El boom del guano ha terminado!</text>
+ <text speaker="Ciudadano preocupado">¿Y ahora qué será de nosotros? El país entero dependía del guano.</text>
+
+ <image name="titulares_periodicos_crisis" audio="tension" />
+ <text speaker="Narrador">Los titulares de los periódicos reflejan la incertidumbre nacional: el Perú debe reinventarse después de décadas de dependencia del guano. Es el fin de una era y el inicio de grandes desafíos económicos y sociales.</text>
+
+ <!-- Escena 13: Despacho presidencial, 1879 -->
+ <image name="presidente_prado_asesores_crisis" audio="reflexion" />
+ <text speaker="Narrador">**Palacio de Gobierno, Lima - Año 1879**</text>
+ <text speaker="Narrador">En el palacio presidencial, Mariano Ignacio Prado hace un balance amargo de la era guanera. El país ha malgastado una oportunidad histórica de desarrollo sostenible, prefiriendo el consumo suntuario sobre la inversión productiva. Ahora, con la crisis económica y las amenazas externas, el Perú enfrenta su hora más difícil.</text>
+ <text speaker="Presidente Prado">Hemos malgastado la riqueza del guano. En lugar de desarrollar industrias y educación, solo importamos lujos.</text>
+ <text speaker="Asesor">La 'prosperidad falaz' nos cegó, Excelencia. Ahora Chile amenaza nuestros territorios salitreros.</text>
+
+ <!-- Escena 14: Puerto del Callao, últimos días del boom -->
+ <image name="puerto_callao_menos_activo" audio="reflexion" />
+ <text speaker="Narrador">**Puerto del Callao - Últimos meses de 1879**</text>
+ <text speaker="Narrador">El puerto del Callao, otrora bullicioso centro del comercio guanero, muestra signos evidentes de decadencia. Pocos barcos esperan cargar guano, y los trabajadores portuarios recuerdan con nostalgia los tiempos de mayor actividad. Es el símbolo visual del fin de una era.</text>
+ <text speaker="Viejo trabajador portuario">Ya no vienen tantos barcos como antes. El guano se está acabando y los precios han bajado.</text>
+ <text speaker="Joven trabajador">Mi abuelo me contó que en los mejores tiempos salían 50 barcos por semana cargados de guano.</text>
+
+ <image name="islas_guaneras_agotadas" audio="reflexion" />
+ <text speaker="Narrador">Las islas guaneras, antaño montañas blancas de fertilizante, muestran la tierra rocosa bajo décadas de explotación intensiva. Este paisaje desolado es la metáfora perfecta de un modelo económico que agotó sus recursos sin crear alternativas sostenibles.</text>
+
+ <!-- Escena 15: Reflexión final -->
+ <image name="panoramica_lima_atardecer_1879" audio="reflexion" />
+ <text speaker="Narrador">**Lima al atardecer - Finales de 1879**</text>
+ <text speaker="Narrador">Mientras contemplo Lima desde las alturas al final de este período histórico, comprendo las lecciones de la Era del Guano. Esta época transformó al Perú, construyó ferrocarriles y modernizó Lima, pero también lo hizo peligrosamente dependiente de un solo producto. La falta de visión a largo plazo convirtió la riqueza temporal en crisis estructural.</text>
+ <text speaker="Intelectual peruano">Fuimos ricos en recursos pero pobres en visión. El guano pudo haber sido la base para un desarrollo sostenible.</text>
+
+ <text speaker="Narrador">La Era del Guano nos enseña que los recursos naturales son una oportunidad, no una garantía de prosperidad. Sin planificación, inversión en educación, desarrollo industrial y distribución equitativa, la riqueza temporal puede convertirse en dependencia y vulnerabilidad.</text>
+
+ <!-- Escena 16: Regreso al presente -->
+ <image name="estudiante_cerrando_libro_biblioteca" audio="ambiente"/>
+ <text speaker="Narrador">**Biblioteca escolar - Presente**</text>
+ <text speaker="Narrador">Al cerrar esta sección del libro, regreso a la biblioteca con una lección fundamental grabada en mi mente: los recursos naturales son una oportunidad, pero su mal uso puede llevar a la dependencia y la crisis. La Era del Guano nos enseña sobre la importancia de planificar el futuro con sabiduría, diversificar la economía y no confiar en la riqueza temporal como base de desarrollo sostenible.</text>
+
+ <text speaker="Narrador">He aprendido que la verdadera prosperidad de un país no se mide solo por sus recursos naturales, sino por su capacidad de transformarlos en desarrollo humano, educación, instituciones sólidas e industrias que perduren más allá del agotamiento de cualquier recurso particular.</text>
+</story>

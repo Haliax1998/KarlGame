@@ -1,0 +1,121 @@
+<questions topic="Historia">
+  <question>
+    <q>¿Qué período abarca la Era del Guano en el Perú?</q>
+    <a1>1840-1879</a1>
+    <a2>1821-1840</a2>
+    <a3>1850-1890</a3>
+    <a4>1860-1880</a4>
+    <epicHint>Este período comenzó cuando se descubrió el valor del guano como fertilizante y terminó con el inicio de la Guerra del Pacífico.</epicHint>
+    <legendaryHint>Comenzó en 1840 y terminó en 1879.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué es el guano y por qué era tan valioso?</q>
+    <a1>Excremento de aves marinas acumulado durante siglos, usado como fertilizante</a1>
+    <a2>Un mineral precioso usado para joyería</a2>
+    <a3>Un tipo de algodón de alta calidad</a3>
+    <a4>Una especia muy cotizada en Europa</a4>
+    <epicHint>Las aves marinas habían acumulado esta sustancia en las islas durante miles de años, y era el mejor fertilizante natural del mundo.</epicHint>
+    <legendaryHint>Es excremento de aves marinas.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quién fue el presidente peruano más importante durante el auge del guano?</q>
+    <a1>Ramón Castilla</a1>
+    <a2>José de San Martín</a2>
+    <a3>Simón Bolívar</a3>
+    <a4>Augusto B. Leguía</a4>
+    <epicHint>Este presidente governó durante gran parte del período guanero y promovió el uso de estos recursos para modernizar el país.</epicHint>
+    <legendaryHint>Su apellido es Castilla.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cuáles fueron las principales islas productoras de guano?</q>
+    <a1>Islas Chincha</a1>
+    <a2>Islas Galápagos</a2>
+    <a3>Islas Ballestas</a3>
+    <a4>Islas Lobos</a4>
+    <epicHint>Estas islas frente al puerto de Pisco fueron las más importantes productoras de guano durante el boom.</epicHint>
+    <legendaryHint>Comienzan con "Chin".</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué se construyó principalmente con los ingresos del guano?</q>
+    <a1>Ferrocarriles y obras públicas</a1>
+    <a2>Hospitales y escuelas</a2>
+    <a3>Fábricas textiles</a3>
+    <a4>Universidades</a4>
+    <epicHint>El ferrocarril Lima-Callao y el ferrocarril Central fueron las obras más importantes de esta época.</epicHint>
+    <legendaryHint>Principalmente ferrocarriles.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Quiénes eran los consignatarios?</q>
+    <a1>Comerciantes que controlaban la venta del guano</a1>
+    <a2>Trabajadores que extraían el guano</a2>
+    <a3>Funcionarios del gobierno</a3>
+    <a4>Capitanes de barco</a4>
+    <epicHint>Estas personas se hicieron millonarias controlando el comercio de exportación del guano.</epicHint>
+    <legendaryHint>Eran comerciantes controladores.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué trabajadores trajeron al Perú para extraer el guano?</q>
+    <a1>Coolíes chinos</a1>
+    <a2>Africanos esclavizados</a2>
+    <a3>Trabajadores europeos</a3>
+    <a4>Indígenas de la selva</a4>
+    <epicHint>Miles de estos trabajadores asiáticos llegaron al Perú en condiciones muy difíciles para trabajar en las islas guaneras.</epicHint>
+    <legendaryHint>Venían de China.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Por qué se le llamó "prosperidad falaz" a la Era del Guano?</q>
+    <a1>Porque solo benefició a unos pocos y creó dependencia</a1>
+    <a2>Porque el guano no era realmente valioso</a2>
+    <a3>Porque duró muy poco tiempo</a3>
+    <a4>Porque el gobierno mintió sobre las ganancias</a4>
+    <epicHint>Se le llamó así porque la riqueza no se distribuyó equitativamente y el país se volvió dependiente de un solo producto.</epicHint>
+    <legendaryHint>Fue falsa prosperidad por la dependencia.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué otro recurso natural se volvió importante hacia el final de la Era del Guano?</q>
+    <a1>El salitre</a1>
+    <a2>El petróleo</a2>
+    <a3>El cobre</a3>
+    <a4>La plata</a4>
+    <epicHint>Este "oro blanco" del desierto de Atacama se usaba para hacer fertilizantes y explosivos.</epicHint>
+    <legendaryHint>Es el "oro blanco" del desierto.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Cuál fue una de las principales consecuencias negativas del boom del guano?</q>
+    <a1>El endeudamiento externo excesivo</a1>
+    <a2>La industrialización acelerada del país</a2>
+    <a3>El desarrollo de la educación pública</a3>
+    <a4>La unificación nacional</a4>
+    <epicHint>El gobierno gastó más de lo que ingresaba, hipotecando las futuras ganancias del guano.</epicHint>
+    <legendaryHint>Se endeudaron demasiado.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué famoso ingeniero estadounidense construyó ferrocarriles en el Perú durante esta época?</q>
+    <a1>Henry Meiggs</a1>
+    <a2>Thomas Edison</a2>
+    <a3>Alexander Graham Bell</a3>
+    <a4>John D. Rockefeller</a4>
+    <epicHint>Este constructor fue contratado para hacer el ferrocarril más ambicioso del mundo, atravesando los Andes peruanos.</epicHint>
+    <legendaryHint>Su apellido es Meiggs.</legendaryHint>
+  </question>
+
+  <question>
+    <q>¿Qué lección importante nos deja la Era del Guano para el manejo actual de los recursos naturales del Perú?</q>
+    <a1>Se debe diversificar la economía y planificar a largo plazo</a1>
+    <a2>Los recursos naturales siempre traen prosperidad</a2>
+    <a3>Es mejor no explotar los recursos naturales</a3>
+    <a4>Solo se deben vender recursos a países vecinos</a4>
+    <epicHint>La historia nos enseña que depender de un solo recurso puede ser peligroso si no se planifica bien el futuro.</epicHint>
+    <legendaryHint>Hay que diversificar y planificar.</legendaryHint>
+  </question>
+</questions>
