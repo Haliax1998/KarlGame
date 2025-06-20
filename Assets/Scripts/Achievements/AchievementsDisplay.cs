@@ -65,7 +65,6 @@ public class AchievementManager : MonoBehaviour
             }
 
             // Actualiza UI
-            storyUI.storyText.text = storyUI.storyName;
             storyUI.scoreText.text = $"{bestPercentage:F1}%";
 
             // Asigna medalla
