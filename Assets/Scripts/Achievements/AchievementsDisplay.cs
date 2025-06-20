@@ -40,7 +40,6 @@ public class AchievementManager : MonoBehaviour
             // Muestra "0%" y noMedal para cada historia
             foreach (var storyUI in stories)
             {
-                storyUI.storyText.text = storyUI.storyName;
                 storyUI.scoreText.text = "0%";
                 storyUI.medalImage.sprite = noMedal;
             }
