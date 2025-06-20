@@ -46,6 +46,13 @@ public class Scene01Events : MonoBehaviour
             else
                 ResumeGame();
         }
+
+        // Detectar barra espaciadora para avanzar
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (!isLogOpen) clickedInArea = true;
+        }
+
     }
 
 
