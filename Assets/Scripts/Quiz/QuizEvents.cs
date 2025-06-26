@@ -287,7 +287,7 @@ public class QuizEvents : MonoBehaviour
         if (showMedal)
         {
             var rt = backButton.GetComponent<RectTransform>();
-            rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, -280);
+            //rt.anchoredPosition = new Vector2(rt.anchoredPosition.x, -280);
         }
 
         // Activar botón de reintento si <70%
