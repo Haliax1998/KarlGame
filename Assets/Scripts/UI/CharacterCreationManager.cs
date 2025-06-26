@@ -79,6 +79,13 @@ public class CharacterCreationManager : MonoBehaviour
 
         Debug.Log($"Guardado: {playerName}, Index: {selectedIndex}, Imagen: {spriteNames[selectedIndex]}");
 
+        GoBack();
+    }
+
+    public void GoBack()
+    {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+
 }

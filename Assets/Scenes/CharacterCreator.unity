@@ -1453,9 +1453,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: AchievementManager, Assembly-CSharp
-        m_MethodName: GoToStorySelector
+      - m_Target: {fileID: 1559807090}
+        m_TargetAssemblyTypeName: CharacterCreationManager, Assembly-CSharp
+        m_MethodName: GoBack
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

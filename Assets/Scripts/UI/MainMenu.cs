@@ -22,6 +22,11 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(TransferToAchievementScene());
     }
 
+    public void StartCharacter()
+    {
+        StartCoroutine(TransferToCharacterScene());
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -32,6 +37,12 @@ public class MainMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(0);
         SceneManager.LoadScene(1);
+    }
+
+    IEnumerator TransferToCharacterScene()
+    {
+        yield return new WaitForSeconds(0);
+        SceneManager.LoadScene(6);
     }
 
     IEnumerator TransferToAchievementScene()
