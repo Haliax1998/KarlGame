@@ -25,9 +25,16 @@ public class AchievementManager : MonoBehaviour
     public Sprite goldMedal;
     public Sprite noMedal;
 
+    [Header("Perfil de usuario")]
+    public GameObject profilePanel;
+    public TextMeshProUGUI nameUserText;
+    public Image imageUser;
+
+
     void Start()
     {
         LoadAchievements();
+        LoadUserProfile();
     }
 
     void LoadAchievements()
@@ -84,5 +91,33 @@ public class AchievementManager : MonoBehaviour
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
+
+    void LoadUserProfile()
+    {
+        string userName = PlayerPrefs.GetString("PlayerName", "");
+        string imageName = PlayerPrefs.GetString("ProfileImageName", "");
+
+        if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(imageName))
+        {
+            profilePanel.SetActive(false);
+            Debug.Log("No se encontró perfil guardado.");
+            return;
+        }
+
+        nameUserText.text = userName;
+
+        Sprite userSprite = Resources.Load<Sprite>("Profile/" + imageName);
+        if (userSprite != null)
+        {
+            imageUser.sprite = userSprite;
+            profilePanel.SetActive(true);
+        }
+        else
+        {
+            Debug.LogWarning("No se encontró la imagen de perfil: " + imageName);
+            profilePanel.SetActive(false);
+        }
+    }
+
 
 }
