@@ -6,9 +6,11 @@ public class MapPlayerController : MonoBehaviour
     public float speed = 250f;
     private Image imageRenderer;
 
+    [Header("Panel de Confirmación")]
+    public GameObject promptPanel;
+
     void Start()
     {
-        // Obtiene el componente Image del propio objeto
         imageRenderer = GetComponent<Image>();
 
         if (imageRenderer == null)
@@ -22,6 +24,10 @@ public class MapPlayerController : MonoBehaviour
 
     void Update()
     {
+        // Si el modal está activo, no permitir movimiento
+        if (promptPanel != null && promptPanel.activeSelf)
+            return;
+
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
         transform.Translate(new Vector3(h, v, 0) * speed * Time.deltaTime);
