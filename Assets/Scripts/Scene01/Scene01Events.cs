@@ -197,6 +197,7 @@ public class Scene01Events : MonoBehaviour
         if (eventPos == 1)
         {
             Debug.Log("Iniciando transición a la escena...");
+            Time.timeScale = 1f; // Restaurar velocidad normal
             StartCoroutine(TransitionToQuiz());
         }
     }
@@ -211,6 +212,7 @@ public class Scene01Events : MonoBehaviour
         isPaused = true;
         pauseMenuPanel.SetActive(true);
         Time.timeScale = 0f;
+        eventPos = 1;
     }
 
     public void ResumeGame()
@@ -218,6 +220,7 @@ public class Scene01Events : MonoBehaviour
         isPaused = false;
         pauseMenuPanel.SetActive(false);
         Time.timeScale = 1f;
+        eventPos = 0;
     }
 
     public void GoToMainMenu()
